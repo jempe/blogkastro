@@ -1,0 +1,427 @@
+<!doctype html>
+<html amp lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+    		<title>Mi Blog</title>
+		<link rel="canonical" href="https://blogkastro.github.io/apache/configuracion_mod_rewrite_para_codeigniter_en_servidores_godaddy/" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		
+		<script type="application/ld+json">
+			{
+			  "@context": "http://schema.org",
+			  "@type": "Article",
+			  "headline": "Configuración mod_rewrite para CodeIgniter en servidores godaddy",
+			  "datePublished": "2008-11-18",
+			  "description": "Bueno soy un programador web y uno de los proveedores de hosting mas populares es GoDaddy, asi que cuando deseas tener un sitio desarrollado en php (CodeIgniter o Jempe) con urls amigables para buscadores, tienes varias opciones entre ellas utilizar el módulo de apache mod rewrite. Godaddy tiene habilitado…",
+    			  "wordCount": 152
+			}
+		</script>
+		
+		<meta name="description" content="Bueno soy un programador web y uno de los proveedores de hosting mas populares es GoDaddy, asi que cuando deseas tener un sitio desarrollado en php (CodeIgniter o Jempe) con urls amigables para buscadores, tienes varias opciones entre ellas utilizar el módulo de apache mod rewrite. Godaddy tiene habilitado…" />
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+		<noscript>
+			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+		</noscript>
+		<link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+                <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+		<style amp-custom>
+html{
+	font-size:1.2rem;
+	line-height: 1.5;
+	color:#666;
+	font-family: "Open Sans Condensed",sans-serif;
+}
+body{
+	margin:0;
+	padding:0;
+}
+p{
+	font-size:1rem;
+}
+h1, h2, h3, h4, h5{
+	font-family: "Ovo",sans-serif;
+	line-height:1.1;
+}
+h1 {
+    font-size: 1.4em;
+}
+h2{
+	font-size:1.2em;
+}
+a{
+	color:#0B7A2A;
+	text-decoration:none;
+}
+pre{
+	margin:0;
+}
+header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #ccc;
+    padding:1rem;
+    background: #0B7A2A;
+    color: white;
+}
+header > h1, header > h5 {
+	margin:0;
+}
+header > h1 > a{
+	color:white;
+}
+header h5 {
+	font-family:"Open Sans Condensed",sans-serif;
+	font-weight:400;
+}
+main {
+	padding:1.5rem;
+	width: calc(100% - 250px);
+	float: left;
+	box-sizing: border-box;
+	border-left:solid 1px #EEE;
+}
+section.summary {
+    border-bottom: solid 4px #EEE;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+time {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: none repeat scroll 0% 0% #FFF;
+    padding: 0px;
+    border-radius: 10px;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 20px;
+    border: solid 3px green;
+    font-family: "Open Sans Condensed",sans-serif;
+    font-weight: normal;
+}
+time .day {
+    float: left;
+    width: 100%;
+    font-size: 27px;
+    line-height: 24px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+time .month {
+    float: left;
+    width: 100%;
+    font-size: 21px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 0;
+    background: green;
+    color: white;
+}
+time .year {
+    float: left;
+    width: 100%;
+    font-size: 13px;
+}
+.month01:before {
+    content: "ENE";
+}
+.month02:before {
+    content: "FEB";
+}
+.month03:before {
+    content: "MAR";
+}
+.month04:before {
+    content: "ABR";
+}
+.month05:before {
+    content: "MAY";
+}
+.month06:before {
+    content: "JUN";
+}
+.month07:before {
+    content: "JUL";
+}
+.month08:before {
+    content: "AGO";
+}
+.month09:before {
+    content: "SEP";
+}
+.month10:before {
+    content: "OCT";
+}
+.month11:before {
+    content: "NOV";
+}
+.month12:before {
+    content: "DEC";
+}
+code {
+    float: left;
+    width: 100%;
+    padding: 3%;
+    border: solid 1px #CCC;
+    box-sizing:border-box;
+    overflow: auto;
+    margin: 0.5rem 0;
+    font-size: 0.8em;
+}
+#post_categories a:after {
+    content: ",";
+}
+#post_categories a:last-child:after {
+    display: none;
+}
+footer {
+	padding: 1.5rem;
+	float: left;
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	border-top: solid 1px #EEE;
+}
+#license {
+    margin-bottom: 20px;
+}
+#license amp-img {
+    margin-right: 5px;
+}
+section#pagination:empty {
+	display:none;
+}
+section#paginator {
+	height:30px;
+}
+a#next {
+    float: right;
+}
+aside#sidebar {
+    width: 250px;
+    float: left;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: #EEE;
+    z-index:1;
+}
+aside#sidebar > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.8;
+}
+footer small {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    float: left;
+    width: 100%;
+    padding: 0 3rem;
+    box-sizing: border-box;
+}
+div#disqus_thread {
+    margin-top: 2rem;
+}
+a#menu_button span,
+a#menu_button_close span {
+    float: left;
+    width: 70%;
+    height: 4px;
+    margin: 3px 4px;
+    background: none repeat scroll 0% 0% #FFF;
+    border-radius: 5px;
+}
+a#menu_button,
+a#menu_button_close {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 40px;
+    display:none;
+}
+article > * {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+main > section, main > section > article {
+    float: left;
+    width: 100%;
+}
+article > figure {
+    margin: 0;
+    padding: 1rem 0;
+    max-width:1000px;
+}
+main > section.summary > article {
+	width: calc(100% - 110px);
+	float:right;
+}
+main > section.summary > article > p {
+    margin-top: 0;
+}
+figure.max300 {
+	max-width:300px;
+}
+figure.max400 {
+	max-width:400px;
+}
+figure.max500 {
+	max-width:500px;
+}
+figure.max600 {
+	max-width:600px;
+}
+@media (max-width:767px) {
+	header > h5 {
+		display:none;
+	}
+	a#menu_button {
+		display:block;
+	}
+	aside#sidebar {
+		margin-left:-250px;
+		transition-duration:1s;
+		position: absolute;
+    		border-radius: 0 0 1rem 0;
+	}
+	main {
+		width:100%;
+	}
+	body.show_menu aside#sidebar {
+	    margin-left: 0;
+	    box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
+	}
+	body.show_menu a#menu_button {
+		display:none;
+	}
+	body.show_menu a#menu_button_close {
+		display:block;
+	}
+}
+</style>
+
+
+		
+		<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+		<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>	
+	</head>
+	<body [class]="menuState.status">
+		
+		<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-NHBSGGK&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+
+<header>
+	<amp-state id="menuState">
+  		<script type="application/json">
+    			{
+      				"status": ""
+    			}
+  		</script>
+	</amp-state>
+	<a id="menu_button" on="tap:AMP.setState({menuState: {status : 'show_menu'}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<a id="menu_button_close" on="tap:AMP.setState({menuState: {status : ''}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+
+	<h1>
+		<a href="https://blogkastro.github.io/">Mi Blog</a>
+	</h1>
+	<h5>Programador Web, fanático del software libre, hardware libre y energía renovable. Quito Ecuador</h5>
+</header>
+
+
+<aside id="sidebar" >
+	<ul>
+		<li><a href="https://blogkastro.github.io/">Inicio</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/android"> Android (4)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/apache"> Apache (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/cocos-2d-x"> Cocos-2d-X (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css"> Css (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css3"> Css3 (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/firefox"> Firefox (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/gnu/linux"> Gnu/Linux (15)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/go"> Go (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/hugo"> Hugo (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ios"> Ios (2)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ndk"> Ndk (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/nexus"> Nexus (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/php"> Php (3)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/python"> Python (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/reprap"> Reprap (6)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/twitter"> Twitter (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ubuntu"> Ubuntu (5)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/wordpress"> Wordpress (2)</a></li>
+	
+	</ul>
+</aside>
+
+<main>
+	<section>
+			<time datetime="2008-11-18"><span class="day">18</span><span class="month month11"></span><span class="year">2008</span></time>
+
+
+		<h2>Configuración mod_rewrite para CodeIgniter en servidores godaddy</h2>
+	</section>
+	<section>
+		<article>
+			<p>Soy un programador web y uno de los proveedores de hosting mas  populares es GoDaddy, asi que cuando deseas tener un sitio desarrollado  en php (CodeIgniter o <a href="http://code.google.com/p/jempe/">Jempe</a>)  con urls amigables para buscadores, tienes varias opciones entre ellas  utilizar el módulo de apache mod rewrite. Godaddy tiene habilitado mod  rewrite pero es un poco dificil hacer que funcione, al menos utilice el  archivo .htaccess que he usado en muchos otros servidores sin problema,  pero en Godaddy me ha dado problemas. Finalmente encontre que hacer para  que funcione y decidi compartirlo . Ojalá le ahorre tiempo a alguien.<br /><br />Este es el contenido del archivo .htaccess</p>
+
+<pre><code>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} ^/system.*
+RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?/$1 [L]
+
+# If we don't have mod_rewrite installed, all 404's
+# can be sent to index.php, and everything works as normal.
+# Submitted by: ElliotHaughin
+
+ErrorDocument 404 /index.php
+</code></pre>
+
+		</article>
+	</section>
+	<div id="post_categories">
+		Categorias: 
+		
+			<a href="https://blogkastro.github.io/categories/apache"> Apache </a>
+		
+	</div>
+</main>
+	<footer>
+		<div id="license">
+			<a rel="license" href="//creativecommons.org/licenses/by/3.0/"><amp-img alt="Licencia Creative Commons" src="//i.creativecommons.org/l/by/3.0/88x31.png" width="88" height="31" layout="fixed"></a><span id="license_text">Este obra está bajo una <a rel="license" href="//creativecommons.org/licenses/by/3.0/">licencia Creative Commons Atribución 3.0 Unported</a>.</span>
+		</div>
+		<small>Juan Castro is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com. / Juan Castro participa en el programa de afiliados de Amazon Services LLC, un programa diseñado para ganar comisiones por anunciar productos de amazon.com.</small>
+	</footer>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gos on Mi Blog</title>
+    <link>https://blogkastro.github.io/go/</link>
+    <description>Recent content in Gos on Mi Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ec</language>
+    <lastBuildDate>Sat, 09 Aug 2014 12:17:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blogkastro.github.io/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Comandos útiles para administrar un blog HUGO</title>
+      <link>https://blogkastro.github.io/go/hugo/comandos_utiles_para_blog_usando_hugo/</link>
+      <pubDate>Sat, 09 Aug 2014 12:17:00 +0000</pubDate>
+      
+      <guid>https://blogkastro.github.io/go/hugo/comandos_utiles_para_blog_usando_hugo/</guid>
+      <description>Estuve buscando una herramienta útil para mejorar mi blog. No estoy muy contento con el sistema de administración actual. Prefiero usar mi editor de texto (Kate) en lugar de una interface web de administración.
+Deseaba convertir todo a archivos estáticos, y estaba creando una herramienta usando GO, pero de pronto me encontre con un proyecto interesante. HUGO es la herramienta que me ofrece todo lo que necesito, solo debo crear unos cuantos archivos html de una manera organizada y HUGO se encarga de poner todo en su lugar.</description>
+    </item>
+    
+  </channel>
+</rss>

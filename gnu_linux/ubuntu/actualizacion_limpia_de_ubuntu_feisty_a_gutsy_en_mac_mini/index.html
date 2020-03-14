@@ -1,0 +1,485 @@
+<!doctype html>
+<html amp lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+    		<title>Mi Blog</title>
+		<link rel="canonical" href="https://blogkastro.github.io/gnu_linux/ubuntu/actualizacion_limpia_de_ubuntu_feisty_a_gutsy_en_mac_mini/" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		
+		<script type="application/ld+json">
+			{
+			  "@context": "http://schema.org",
+			  "@type": "Article",
+			  "headline": "Actualización limpia de Ubuntu Feisty a Gutsy en Mac Mini",
+			  "datePublished": "2007-10-25",
+			  "description": "El 19 de Octubre baje la imagen del CD de Ubuntu Gutsy y no podía esperar para probarlo, lo instale primero en un Pentium 4 y después en un clon Core 2 duo, hoy finalmente he decidido instalarlo en mi mac mini. No deseo hacer el upgrade por medio de Synaptic porque pienso que hay la posibilidad de que algunos paquetes tengan problemas, y pienso hacer una actualización limpia . Estoy escribiendo esta guía mientras la actualizo.Requisitos:Hacer un backup de todos los archivos, bases de datos, etc. (el home no será borrado, pero es mejor tener…",
+    			  "wordCount": 408
+			}
+		</script>
+		
+		<meta name="description" content="El 19 de Octubre baje la imagen del CD de Ubuntu Gutsy y no podía esperar para probarlo, lo instale primero en un Pentium 4 y después en un clon Core 2 duo, hoy finalmente he decidido instalarlo en mi mac mini. No deseo hacer el upgrade por medio de Synaptic porque pienso que hay la posibilidad de que algunos paquetes tengan problemas, y pienso hacer una actualización limpia . Estoy escribiendo esta guía mientras la actualizo.Requisitos:Hacer un backup de todos los archivos, bases de datos, etc. (el home no será borrado, pero es mejor tener…" />
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+		<noscript>
+			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+		</noscript>
+		<link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+                <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+		<style amp-custom>
+html{
+	font-size:1.2rem;
+	line-height: 1.5;
+	color:#666;
+	font-family: "Open Sans Condensed",sans-serif;
+}
+body{
+	margin:0;
+	padding:0;
+}
+p{
+	font-size:1rem;
+}
+h1, h2, h3, h4, h5{
+	font-family: "Ovo",sans-serif;
+	line-height:1.1;
+}
+h1 {
+    font-size: 1.4em;
+}
+h2{
+	font-size:1.2em;
+}
+a{
+	color:#0B7A2A;
+	text-decoration:none;
+}
+pre{
+	margin:0;
+}
+header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #ccc;
+    padding:1rem;
+    background: #0B7A2A;
+    color: white;
+}
+header > h1, header > h5 {
+	margin:0;
+}
+header > h1 > a{
+	color:white;
+}
+header h5 {
+	font-family:"Open Sans Condensed",sans-serif;
+	font-weight:400;
+}
+main {
+	padding:1.5rem;
+	width: calc(100% - 250px);
+	float: left;
+	box-sizing: border-box;
+	border-left:solid 1px #EEE;
+}
+section.summary {
+    border-bottom: solid 4px #EEE;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+time {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: none repeat scroll 0% 0% #FFF;
+    padding: 0px;
+    border-radius: 10px;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 20px;
+    border: solid 3px green;
+    font-family: "Open Sans Condensed",sans-serif;
+    font-weight: normal;
+}
+time .day {
+    float: left;
+    width: 100%;
+    font-size: 27px;
+    line-height: 24px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+time .month {
+    float: left;
+    width: 100%;
+    font-size: 21px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 0;
+    background: green;
+    color: white;
+}
+time .year {
+    float: left;
+    width: 100%;
+    font-size: 13px;
+}
+.month01:before {
+    content: "ENE";
+}
+.month02:before {
+    content: "FEB";
+}
+.month03:before {
+    content: "MAR";
+}
+.month04:before {
+    content: "ABR";
+}
+.month05:before {
+    content: "MAY";
+}
+.month06:before {
+    content: "JUN";
+}
+.month07:before {
+    content: "JUL";
+}
+.month08:before {
+    content: "AGO";
+}
+.month09:before {
+    content: "SEP";
+}
+.month10:before {
+    content: "OCT";
+}
+.month11:before {
+    content: "NOV";
+}
+.month12:before {
+    content: "DEC";
+}
+code {
+    float: left;
+    width: 100%;
+    padding: 3%;
+    border: solid 1px #CCC;
+    box-sizing:border-box;
+    overflow: auto;
+    margin: 0.5rem 0;
+    font-size: 0.8em;
+}
+#post_categories a:after {
+    content: ",";
+}
+#post_categories a:last-child:after {
+    display: none;
+}
+footer {
+	padding: 1.5rem;
+	float: left;
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	border-top: solid 1px #EEE;
+}
+#license {
+    margin-bottom: 20px;
+}
+#license amp-img {
+    margin-right: 5px;
+}
+section#pagination:empty {
+	display:none;
+}
+section#paginator {
+	height:30px;
+}
+a#next {
+    float: right;
+}
+aside#sidebar {
+    width: 250px;
+    float: left;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: #EEE;
+    z-index:1;
+}
+aside#sidebar > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.8;
+}
+footer small {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    float: left;
+    width: 100%;
+    padding: 0 3rem;
+    box-sizing: border-box;
+}
+div#disqus_thread {
+    margin-top: 2rem;
+}
+a#menu_button span,
+a#menu_button_close span {
+    float: left;
+    width: 70%;
+    height: 4px;
+    margin: 3px 4px;
+    background: none repeat scroll 0% 0% #FFF;
+    border-radius: 5px;
+}
+a#menu_button,
+a#menu_button_close {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 40px;
+    display:none;
+}
+article > * {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+main > section, main > section > article {
+    float: left;
+    width: 100%;
+}
+article > figure {
+    margin: 0;
+    padding: 1rem 0;
+    max-width:1000px;
+}
+main > section.summary > article {
+	width: calc(100% - 110px);
+	float:right;
+}
+main > section.summary > article > p {
+    margin-top: 0;
+}
+figure.max300 {
+	max-width:300px;
+}
+figure.max400 {
+	max-width:400px;
+}
+figure.max500 {
+	max-width:500px;
+}
+figure.max600 {
+	max-width:600px;
+}
+@media (max-width:767px) {
+	header > h5 {
+		display:none;
+	}
+	a#menu_button {
+		display:block;
+	}
+	aside#sidebar {
+		margin-left:-250px;
+		transition-duration:1s;
+		position: absolute;
+    		border-radius: 0 0 1rem 0;
+	}
+	main {
+		width:100%;
+	}
+	body.show_menu aside#sidebar {
+	    margin-left: 0;
+	    box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
+	}
+	body.show_menu a#menu_button {
+		display:none;
+	}
+	body.show_menu a#menu_button_close {
+		display:block;
+	}
+}
+</style>
+
+
+		
+		<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+		<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>	
+	</head>
+	<body [class]="menuState.status">
+		
+		<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-NHBSGGK&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+
+<header>
+	<amp-state id="menuState">
+  		<script type="application/json">
+    			{
+      				"status": ""
+    			}
+  		</script>
+	</amp-state>
+	<a id="menu_button" on="tap:AMP.setState({menuState: {status : 'show_menu'}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<a id="menu_button_close" on="tap:AMP.setState({menuState: {status : ''}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+
+	<h1>
+		<a href="https://blogkastro.github.io/">Mi Blog</a>
+	</h1>
+	<h5>Programador Web, fanático del software libre, hardware libre y energía renovable. Quito Ecuador</h5>
+</header>
+
+
+<aside id="sidebar" >
+	<ul>
+		<li><a href="https://blogkastro.github.io/">Inicio</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/android"> Android (4)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/apache"> Apache (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/cocos-2d-x"> Cocos-2d-X (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css"> Css (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css3"> Css3 (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/firefox"> Firefox (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/gnu/linux"> Gnu/Linux (15)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/go"> Go (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/hugo"> Hugo (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ios"> Ios (2)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ndk"> Ndk (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/nexus"> Nexus (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/php"> Php (3)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/python"> Python (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/reprap"> Reprap (6)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/twitter"> Twitter (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ubuntu"> Ubuntu (5)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/wordpress"> Wordpress (2)</a></li>
+	
+	</ul>
+</aside>
+
+<main>
+	<section>
+			<time datetime="2007-10-25"><span class="day">25</span><span class="month month10"></span><span class="year">2007</span></time>
+
+
+		<h2>Actualización limpia de Ubuntu Feisty a Gutsy en Mac Mini</h2>
+	</section>
+	<section>
+		<article>
+			<p>El 19 de Octubre baje la imagen del CD de Ubuntu Gutsy y no podía  esperar para probarlo,
+lo instale primero en un Pentium 4 y después en  un clon Core 2 duo, hoy finalmente he decidido instalarlo en mi mac  mini.
+No deseo hacer el upgrade por medio de Synaptic porque pienso que  hay la posibilidad de que algunos paquetes tengan problemas, y pienso  hacer una actualización limpia .
+Estoy escribiendo esta guía mientras la  actualizo.</p>
+
+<p>Requisitos:<br />
+Hacer un backup de todos los archivos, bases de datos, etc. (el home no será borrado, pero es mejor tener un respaldo en caso de equivocarse al momento de instalar)</p>
+
+<p>Tener el home y la raiz en particiones diferentes.</p>
+
+<p>Averiguar los UIDs de cada uno de los usuarios, para eso voy a system -&gt; Administration -&gt; Users and Groups</p>
+
+<figure class="max400">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/users.png"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/users.png 1500w, https://blogkastro.github.io/images/thumbs/1080w/users.png 1080w, https://blogkastro.github.io/images/thumbs/900w/users.png 900w, https://blogkastro.github.io/images/thumbs/800w/users.png 800w, https://blogkastro.github.io/images/thumbs/700w/users.png 700w, https://blogkastro.github.io/images/thumbs/600w/users.png 600w, https://blogkastro.github.io/images/thumbs/500w/users.png 500w, https://blogkastro.github.io/images/thumbs/400w/users.png 400w, https://blogkastro.github.io/images/thumbs/300w/users.png 300w, https://blogkastro.github.io/images/thumbs/200w/users.png 200w, https://blogkastro.github.io/images/thumbs/100w/users.png 100w"
+  width="450"
+  height="251"
+  layout="responsive"
+  alt="Screenshot usuarios"></amp-img>
+	<span class="figcation">Screenshot usuarios</span>
+</figure>
+
+
+<p>Ahora debo recordar el UID de cada usuario. en la imagen el usuario kastro tiene el UID 1000</p>
+
+<figure class="max400">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/kastro.png"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/kastro.png 1500w, https://blogkastro.github.io/images/thumbs/1080w/kastro.png 1080w, https://blogkastro.github.io/images/thumbs/900w/kastro.png 900w, https://blogkastro.github.io/images/thumbs/800w/kastro.png 800w, https://blogkastro.github.io/images/thumbs/700w/kastro.png 700w, https://blogkastro.github.io/images/thumbs/600w/kastro.png 600w, https://blogkastro.github.io/images/thumbs/500w/kastro.png 500w, https://blogkastro.github.io/images/thumbs/400w/kastro.png 400w, https://blogkastro.github.io/images/thumbs/300w/kastro.png 300w, https://blogkastro.github.io/images/thumbs/200w/kastro.png 200w, https://blogkastro.github.io/images/thumbs/100w/kastro.png 100w"
+  width="454"
+  height="526"
+  layout="responsive"
+  alt="Screenshot Propiedades de usuario"></amp-img>
+	<span class="figcation">Screenshot Propiedades de usuario</span>
+</figure>
+
+
+<p>Luego  procedo a instalar Gutsy arrancando desde el CD live, hay que seguir  los pasos del instalador de ubuntu. En el paso # 7 hay que escoger partición manual</p>
+
+<figure class="max500">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/Edit-partition.png"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/Edit-partition.png 1500w, https://blogkastro.github.io/images/thumbs/1080w/Edit-partition.png 1080w, https://blogkastro.github.io/images/thumbs/900w/Edit-partition.png 900w, https://blogkastro.github.io/images/thumbs/800w/Edit-partition.png 800w, https://blogkastro.github.io/images/thumbs/700w/Edit-partition.png 700w, https://blogkastro.github.io/images/thumbs/600w/Edit-partition.png 600w, https://blogkastro.github.io/images/thumbs/500w/Edit-partition.png 500w, https://blogkastro.github.io/images/thumbs/400w/Edit-partition.png 400w, https://blogkastro.github.io/images/thumbs/300w/Edit-partition.png 300w, https://blogkastro.github.io/images/thumbs/200w/Edit-partition.png 200w, https://blogkastro.github.io/images/thumbs/100w/Edit-partition.png 100w"
+  width="546"
+  height="204"
+  layout="responsive"
+  alt="Editar Partición"></amp-img>
+	<span class="figcation">Editar Partición</span>
+</figure>
+
+
+<p>Luego hay que editar la partición raíz, el instalador la quiere montar en /media&hellip; , lo que hay que hacer es cambiar el mount point por / , tal como se ve en la imagen</p>
+
+<figure class="max500">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/partition.png"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/partition.png 1500w, https://blogkastro.github.io/images/thumbs/1080w/partition.png 1080w, https://blogkastro.github.io/images/thumbs/900w/partition.png 900w, https://blogkastro.github.io/images/thumbs/800w/partition.png 800w, https://blogkastro.github.io/images/thumbs/700w/partition.png 700w, https://blogkastro.github.io/images/thumbs/600w/partition.png 600w, https://blogkastro.github.io/images/thumbs/500w/partition.png 500w, https://blogkastro.github.io/images/thumbs/400w/partition.png 400w, https://blogkastro.github.io/images/thumbs/300w/partition.png 300w, https://blogkastro.github.io/images/thumbs/200w/partition.png 200w, https://blogkastro.github.io/images/thumbs/100w/partition.png 100w"
+  width="500"
+  height="418"
+  layout="responsive"
+  alt="Partición"></amp-img>
+	<span class="figcation">Partición</span>
+</figure>
+
+
+<p>Luego hay que cambiar el mount point de la otra particion por /home, finalmente la pantalla debe quedar como en la siguiente imagen</p>
+
+<p>El visto debe estar solamente en la partición raíz, hay que estar seguros de que no formatee la partición home</p>
+
+<p>En el momento que se debe ingresar el nombre de usuario para el nuevo sistema, hay que poner el que correspondía al UID 1000. En mi caso es  kastro tal como se ve en una de las imágenes anteriores</p>
+
+<p>Al  finalizar la instalación y reiniciar el sistema, todos los archivos se  encuentran en su lugar y las preferencias de todos los programas estan  intactos. Pidgin, esta con las mismas preferencias que tenía Gaim en  Feisty. Lo único que debo cargar nuevamente es todas mi bases de datos  MySQL, pero restaurarlas desde el backup no me tomó mas de 5 minutos.</p>
+
+<p>Finalmente funciona bluetooth, y la configuración de mi monitor Acer AL1916W fue mínima, solo  abrí System-&gt;Preferences-&gt;Screen Resolution y escogí 1440x900.</p>
+
+<p>Para instalar ubuntu studio no fue necesario añadir nuevos repositorios, solo necesite buscar ubuntu studio en synaptic.</p>
+
+		</article>
+	</section>
+	<div id="post_categories">
+		Categorias: 
+		
+			<a href="https://blogkastro.github.io/categories/gnu/linux"> GNU/Linux </a>
+		
+			<a href="https://blogkastro.github.io/categories/ubuntu"> Ubuntu </a>
+		
+	</div>
+</main>
+	<footer>
+		<div id="license">
+			<a rel="license" href="//creativecommons.org/licenses/by/3.0/"><amp-img alt="Licencia Creative Commons" src="//i.creativecommons.org/l/by/3.0/88x31.png" width="88" height="31" layout="fixed"></a><span id="license_text">Este obra está bajo una <a rel="license" href="//creativecommons.org/licenses/by/3.0/">licencia Creative Commons Atribución 3.0 Unported</a>.</span>
+		</div>
+		<small>Juan Castro is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com. / Juan Castro participa en el programa de afiliados de Amazon Services LLC, un programa diseñado para ganar comisiones por anunciar productos de amazon.com.</small>
+	</footer>
+</body>
+</html>
+

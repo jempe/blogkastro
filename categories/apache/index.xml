@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache on Mi Blog</title>
+    <link>https://blogkastro.github.io/categories/apache/</link>
+    <description>Recent content in Apache on Mi Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ec</language>
+    <lastBuildDate>Tue, 18 Nov 2008 04:20:31 +0000</lastBuildDate>
+    
+	<atom:link href="https://blogkastro.github.io/categories/apache/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configuración mod_rewrite para CodeIgniter en servidores godaddy</title>
+      <link>https://blogkastro.github.io/apache/configuracion_mod_rewrite_para_codeigniter_en_servidores_godaddy/</link>
+      <pubDate>Tue, 18 Nov 2008 04:20:31 +0000</pubDate>
+      
+      <guid>https://blogkastro.github.io/apache/configuracion_mod_rewrite_para_codeigniter_en_servidores_godaddy/</guid>
+      <description>Soy un programador web y uno de los proveedores de hosting mas populares es GoDaddy, asi que cuando deseas tener un sitio desarrollado en php (CodeIgniter o Jempe) con urls amigables para buscadores, tienes varias opciones entre ellas utilizar el módulo de apache mod rewrite. Godaddy tiene habilitado mod rewrite pero es un poco dificil hacer que funcione, al menos utilice el archivo .htaccess que he usado en muchos otros servidores sin problema, pero en Godaddy me ha dado problemas.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,472 @@
+<!doctype html>
+<html amp lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+    		<title>Mi Blog</title>
+		<link rel="canonical" href="https://blogkastro.github.io/reprap/convertir_tarjeta_sim_en_micro_sim/" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		
+		<script type="application/ld+json">
+			{
+			  "@context": "http://schema.org",
+			  "@type": "Article",
+			  "headline": "Convertir Tarjeta SIM en Micro SIM",
+			  "datePublished": "2012-08-21",
+			  "description": "El fin de semana me pidieron que desbloquee un iPhone4, Lo trajeron de Estados Unidos y no lo pueden usar con las operadoras locales porque esta bloqueado. Utilice los pocos conocimientos que tengo acerca de iOS. Primero utlice Redsn0w para el Jailbreak y luego instale ultrasn0w. Pero para confirmar que funciona necesitaba una tarjeta Micro SIM. Para no estar buscando a alguien que me pudiera prestar una de estas tarjetas decidi cortar la SIM de mi teléfono.   El fin de semana me pidieron que desbloquee un iPhone4, Lo trajeron de Estados Unidos…",
+    			  "wordCount": 185
+			}
+		</script>
+		
+		<meta name="description" content="El fin de semana me pidieron que desbloquee un iPhone4, Lo trajeron de Estados Unidos y no lo pueden usar con las operadoras locales porque esta bloqueado. Utilice los pocos conocimientos que tengo acerca de iOS. Primero utlice Redsn0w para el Jailbreak y luego instale ultrasn0w. Pero para confirmar que funciona necesitaba una tarjeta Micro SIM. Para no estar buscando a alguien que me pudiera prestar una de estas tarjetas decidi cortar la SIM de mi teléfono.   El fin de semana me pidieron que desbloquee un iPhone4, Lo trajeron de Estados Unidos…" />
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+		<noscript>
+			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+		</noscript>
+		<link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+                <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+		<style amp-custom>
+html{
+	font-size:1.2rem;
+	line-height: 1.5;
+	color:#666;
+	font-family: "Open Sans Condensed",sans-serif;
+}
+body{
+	margin:0;
+	padding:0;
+}
+p{
+	font-size:1rem;
+}
+h1, h2, h3, h4, h5{
+	font-family: "Ovo",sans-serif;
+	line-height:1.1;
+}
+h1 {
+    font-size: 1.4em;
+}
+h2{
+	font-size:1.2em;
+}
+a{
+	color:#0B7A2A;
+	text-decoration:none;
+}
+pre{
+	margin:0;
+}
+header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #ccc;
+    padding:1rem;
+    background: #0B7A2A;
+    color: white;
+}
+header > h1, header > h5 {
+	margin:0;
+}
+header > h1 > a{
+	color:white;
+}
+header h5 {
+	font-family:"Open Sans Condensed",sans-serif;
+	font-weight:400;
+}
+main {
+	padding:1.5rem;
+	width: calc(100% - 250px);
+	float: left;
+	box-sizing: border-box;
+	border-left:solid 1px #EEE;
+}
+section.summary {
+    border-bottom: solid 4px #EEE;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+time {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: none repeat scroll 0% 0% #FFF;
+    padding: 0px;
+    border-radius: 10px;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 20px;
+    border: solid 3px green;
+    font-family: "Open Sans Condensed",sans-serif;
+    font-weight: normal;
+}
+time .day {
+    float: left;
+    width: 100%;
+    font-size: 27px;
+    line-height: 24px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+time .month {
+    float: left;
+    width: 100%;
+    font-size: 21px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 0;
+    background: green;
+    color: white;
+}
+time .year {
+    float: left;
+    width: 100%;
+    font-size: 13px;
+}
+.month01:before {
+    content: "ENE";
+}
+.month02:before {
+    content: "FEB";
+}
+.month03:before {
+    content: "MAR";
+}
+.month04:before {
+    content: "ABR";
+}
+.month05:before {
+    content: "MAY";
+}
+.month06:before {
+    content: "JUN";
+}
+.month07:before {
+    content: "JUL";
+}
+.month08:before {
+    content: "AGO";
+}
+.month09:before {
+    content: "SEP";
+}
+.month10:before {
+    content: "OCT";
+}
+.month11:before {
+    content: "NOV";
+}
+.month12:before {
+    content: "DEC";
+}
+code {
+    float: left;
+    width: 100%;
+    padding: 3%;
+    border: solid 1px #CCC;
+    box-sizing:border-box;
+    overflow: auto;
+    margin: 0.5rem 0;
+    font-size: 0.8em;
+}
+#post_categories a:after {
+    content: ",";
+}
+#post_categories a:last-child:after {
+    display: none;
+}
+footer {
+	padding: 1.5rem;
+	float: left;
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	border-top: solid 1px #EEE;
+}
+#license {
+    margin-bottom: 20px;
+}
+#license amp-img {
+    margin-right: 5px;
+}
+section#pagination:empty {
+	display:none;
+}
+section#paginator {
+	height:30px;
+}
+a#next {
+    float: right;
+}
+aside#sidebar {
+    width: 250px;
+    float: left;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: #EEE;
+    z-index:1;
+}
+aside#sidebar > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.8;
+}
+footer small {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    float: left;
+    width: 100%;
+    padding: 0 3rem;
+    box-sizing: border-box;
+}
+div#disqus_thread {
+    margin-top: 2rem;
+}
+a#menu_button span,
+a#menu_button_close span {
+    float: left;
+    width: 70%;
+    height: 4px;
+    margin: 3px 4px;
+    background: none repeat scroll 0% 0% #FFF;
+    border-radius: 5px;
+}
+a#menu_button,
+a#menu_button_close {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 40px;
+    display:none;
+}
+article > * {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+main > section, main > section > article {
+    float: left;
+    width: 100%;
+}
+article > figure {
+    margin: 0;
+    padding: 1rem 0;
+    max-width:1000px;
+}
+main > section.summary > article {
+	width: calc(100% - 110px);
+	float:right;
+}
+main > section.summary > article > p {
+    margin-top: 0;
+}
+figure.max300 {
+	max-width:300px;
+}
+figure.max400 {
+	max-width:400px;
+}
+figure.max500 {
+	max-width:500px;
+}
+figure.max600 {
+	max-width:600px;
+}
+@media (max-width:767px) {
+	header > h5 {
+		display:none;
+	}
+	a#menu_button {
+		display:block;
+	}
+	aside#sidebar {
+		margin-left:-250px;
+		transition-duration:1s;
+		position: absolute;
+    		border-radius: 0 0 1rem 0;
+	}
+	main {
+		width:100%;
+	}
+	body.show_menu aside#sidebar {
+	    margin-left: 0;
+	    box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
+	}
+	body.show_menu a#menu_button {
+		display:none;
+	}
+	body.show_menu a#menu_button_close {
+		display:block;
+	}
+}
+</style>
+
+
+		
+		<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+		<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>	
+	</head>
+	<body [class]="menuState.status">
+		
+		<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-NHBSGGK&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+
+<header>
+	<amp-state id="menuState">
+  		<script type="application/json">
+    			{
+      				"status": ""
+    			}
+  		</script>
+	</amp-state>
+	<a id="menu_button" on="tap:AMP.setState({menuState: {status : 'show_menu'}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<a id="menu_button_close" on="tap:AMP.setState({menuState: {status : ''}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+
+	<h1>
+		<a href="https://blogkastro.github.io/">Mi Blog</a>
+	</h1>
+	<h5>Programador Web, fanático del software libre, hardware libre y energía renovable. Quito Ecuador</h5>
+</header>
+
+
+<aside id="sidebar" >
+	<ul>
+		<li><a href="https://blogkastro.github.io/">Inicio</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/android"> Android (4)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/apache"> Apache (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/cocos-2d-x"> Cocos-2d-X (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css"> Css (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css3"> Css3 (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/firefox"> Firefox (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/gnu/linux"> Gnu/Linux (15)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/go"> Go (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/hugo"> Hugo (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ios"> Ios (2)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ndk"> Ndk (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/nexus"> Nexus (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/php"> Php (3)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/python"> Python (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/reprap"> Reprap (6)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/twitter"> Twitter (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ubuntu"> Ubuntu (5)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/wordpress"> Wordpress (2)</a></li>
+	
+	</ul>
+</aside>
+
+<main>
+	<section>
+			<time datetime="2012-08-21"><span class="day">21</span><span class="month month08"></span><span class="year">2012</span></time>
+
+
+		<h2>Convertir Tarjeta SIM en Micro SIM</h2>
+	</section>
+	<section>
+		<article>
+			<p>El fin de semana me pidieron que desbloquee un iPhone4, Lo trajeron de Estados Unidos y no lo pueden usar con las operadoras locales porque esta bloqueado. Utilice los pocos conocimientos que tengo acerca de iOS. Primero utlice Redsn0w para el Jailbreak y luego instale ultrasn0w. Pero para confirmar que funciona necesitaba una tarjeta Micro SIM. Para no estar buscando a alguien que me pudiera prestar una de estas tarjetas decidi cortar la SIM de mi teléfono.</p>
+
+<figure class="">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/sims1.jpg"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/sims1.jpg 1500w, https://blogkastro.github.io/images/thumbs/1080w/sims1.jpg 1080w, https://blogkastro.github.io/images/thumbs/900w/sims1.jpg 900w, https://blogkastro.github.io/images/thumbs/800w/sims1.jpg 800w, https://blogkastro.github.io/images/thumbs/700w/sims1.jpg 700w, https://blogkastro.github.io/images/thumbs/600w/sims1.jpg 600w, https://blogkastro.github.io/images/thumbs/500w/sims1.jpg 500w, https://blogkastro.github.io/images/thumbs/400w/sims1.jpg 400w, https://blogkastro.github.io/images/thumbs/300w/sims1.jpg 300w, https://blogkastro.github.io/images/thumbs/200w/sims1.jpg 200w, https://blogkastro.github.io/images/thumbs/100w/sims1.jpg 100w"
+  width="2403"
+  height="1462"
+  layout="responsive"
+  alt="Comparación SIM Cards"></amp-img>
+	<span class="figcation">Comparación SIM Cards</span>
+</figure>
+
+
+<p>En la imagen se puede ver a la SIM junto a la Micro SIM, los contactos son muy similares asi que si se corta la tarjeta seguira funcionando perfectamente</p>
+
+<figure class="">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/sim_cortada.jpg"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/sim_cortada.jpg 1500w, https://blogkastro.github.io/images/thumbs/1080w/sim_cortada.jpg 1080w, https://blogkastro.github.io/images/thumbs/900w/sim_cortada.jpg 900w, https://blogkastro.github.io/images/thumbs/800w/sim_cortada.jpg 800w, https://blogkastro.github.io/images/thumbs/700w/sim_cortada.jpg 700w, https://blogkastro.github.io/images/thumbs/600w/sim_cortada.jpg 600w, https://blogkastro.github.io/images/thumbs/500w/sim_cortada.jpg 500w, https://blogkastro.github.io/images/thumbs/400w/sim_cortada.jpg 400w, https://blogkastro.github.io/images/thumbs/300w/sim_cortada.jpg 300w, https://blogkastro.github.io/images/thumbs/200w/sim_cortada.jpg 200w, https://blogkastro.github.io/images/thumbs/100w/sim_cortada.jpg 100w"
+  width="1804"
+  height="1100"
+  layout="responsive"
+  alt="SIM Card Cortada"></amp-img>
+	<span class="figcation">SIM Card Cortada</span>
+</figure>
+
+
+<figure class="">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/adaptador_iphone.jpg"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/adaptador_iphone.jpg 1500w, https://blogkastro.github.io/images/thumbs/1080w/adaptador_iphone.jpg 1080w, https://blogkastro.github.io/images/thumbs/900w/adaptador_iphone.jpg 900w, https://blogkastro.github.io/images/thumbs/800w/adaptador_iphone.jpg 800w, https://blogkastro.github.io/images/thumbs/700w/adaptador_iphone.jpg 700w, https://blogkastro.github.io/images/thumbs/600w/adaptador_iphone.jpg 600w, https://blogkastro.github.io/images/thumbs/500w/adaptador_iphone.jpg 500w, https://blogkastro.github.io/images/thumbs/400w/adaptador_iphone.jpg 400w, https://blogkastro.github.io/images/thumbs/300w/adaptador_iphone.jpg 300w, https://blogkastro.github.io/images/thumbs/200w/adaptador_iphone.jpg 200w, https://blogkastro.github.io/images/thumbs/100w/adaptador_iphone.jpg 100w"
+  width="1441"
+  height="870"
+  layout="responsive"
+  alt="SIM Card Cortada en bandeja de iPhone"></amp-img>
+	<span class="figcation">SIM Card Cortada en bandeja de iPhone</span>
+</figure>
+
+
+<p>Despues de probar la SIM en el iPhone 4, tuve que devolverlo a mi telefono, pero para que sirva tuve que imprimir un adaptador. afortunadamente un usuario de Thingiverse me ahorro el trabajo de diseñar uno, y solamente tuve que descargarlo de la siguiente direccion <a href="http://www.thingiverse.com/thing:22042" target="_blank"><a href="http://www.thingiverse.com/thing:22042">http://www.thingiverse.com/thing:22042</a></a></p>
+
+<figure class="">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/adaptador.jpg"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/adaptador.jpg 1500w, https://blogkastro.github.io/images/thumbs/1080w/adaptador.jpg 1080w, https://blogkastro.github.io/images/thumbs/900w/adaptador.jpg 900w, https://blogkastro.github.io/images/thumbs/800w/adaptador.jpg 800w, https://blogkastro.github.io/images/thumbs/700w/adaptador.jpg 700w, https://blogkastro.github.io/images/thumbs/600w/adaptador.jpg 600w, https://blogkastro.github.io/images/thumbs/500w/adaptador.jpg 500w, https://blogkastro.github.io/images/thumbs/400w/adaptador.jpg 400w, https://blogkastro.github.io/images/thumbs/300w/adaptador.jpg 300w, https://blogkastro.github.io/images/thumbs/200w/adaptador.jpg 200w, https://blogkastro.github.io/images/thumbs/100w/adaptador.jpg 100w"
+  width="1912"
+  height="984"
+  layout="responsive"
+  alt="Adaptador impreso"></amp-img>
+	<span class="figcation">Adaptador impreso</span>
+</figure>
+
+
+<p>A continuación esta la SIM cortada en mi teléfono con el adaptador</p>
+
+<figure class="">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/motorola_sim.jpg"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/motorola_sim.jpg 1500w, https://blogkastro.github.io/images/thumbs/1080w/motorola_sim.jpg 1080w, https://blogkastro.github.io/images/thumbs/900w/motorola_sim.jpg 900w, https://blogkastro.github.io/images/thumbs/800w/motorola_sim.jpg 800w, https://blogkastro.github.io/images/thumbs/700w/motorola_sim.jpg 700w, https://blogkastro.github.io/images/thumbs/600w/motorola_sim.jpg 600w, https://blogkastro.github.io/images/thumbs/500w/motorola_sim.jpg 500w, https://blogkastro.github.io/images/thumbs/400w/motorola_sim.jpg 400w, https://blogkastro.github.io/images/thumbs/300w/motorola_sim.jpg 300w, https://blogkastro.github.io/images/thumbs/200w/motorola_sim.jpg 200w, https://blogkastro.github.io/images/thumbs/100w/motorola_sim.jpg 100w"
+  width="2560"
+  height="1672"
+  layout="responsive"
+  alt="SIM Card con adaptador en teléfono"></amp-img>
+	<span class="figcation">SIM Card con adaptador en teléfono</span>
+</figure>
+
+
+		</article>
+	</section>
+	<div id="post_categories">
+		Categorias: 
+		
+			<a href="https://blogkastro.github.io/categories/reprap"> RepRap </a>
+		
+	</div>
+</main>
+	<footer>
+		<div id="license">
+			<a rel="license" href="//creativecommons.org/licenses/by/3.0/"><amp-img alt="Licencia Creative Commons" src="//i.creativecommons.org/l/by/3.0/88x31.png" width="88" height="31" layout="fixed"></a><span id="license_text">Este obra está bajo una <a rel="license" href="//creativecommons.org/licenses/by/3.0/">licencia Creative Commons Atribución 3.0 Unported</a>.</span>
+		</div>
+		<small>Juan Castro is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com. / Juan Castro participa en el programa de afiliados de Amazon Services LLC, un programa diseñado para ganar comisiones por anunciar productos de amazon.com.</small>
+	</footer>
+</body>
+</html>
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Mi Blog</title>
+    <link>https://blogkastro.github.io/categories/ubuntu/</link>
+    <description>Recent content in Ubuntu on Mi Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ec</language>
+    <lastBuildDate>Sun, 18 Nov 2012 13:13:52 +0000</lastBuildDate>
+    
+	<atom:link href="https://blogkastro.github.io/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Corregir resolución LightDM</title>
+      <link>https://blogkastro.github.io/gnu_linux/ubuntu/corregir_resolucion_lightdm/</link>
+      <pubDate>Sun, 18 Nov 2012 13:13:52 +0000</pubDate>
+      
+      <guid>https://blogkastro.github.io/gnu_linux/ubuntu/corregir_resolucion_lightdm/</guid>
+      <description>Acabo de Instalar Ubuntu 12.10 y me agrada bastante pero he tenido problemas con la resolucion de LightDM asi que busque una solución y encontre que se puede añadir un script al archivo /etc/lightdm/lightdm.conf para obligarlo a que la resolución sea la adecuada.
+Esta es la línea que añadi al final
+display-setup-script=/usr/share/lightdmxrandr.sh Este es el contenido de el archivo /usr/share/lightdmxrandr.sh
+#!/bin/sh xrandr --output DVI-I-1 --primary --mode 1440x900 DVI-I-1 y 1440x900 corresponde al resultado que obtuve al usar el comando</description>
+    </item>
+    
+    <item>
+      <title>Downgrade de paquetes libnss3</title>
+      <link>https://blogkastro.github.io/gnu_linux/ubuntu/downgrade_libnss3/</link>
+      <pubDate>Sun, 18 Nov 2012 13:13:52 +0000</pubDate>
+      
+      <guid>https://blogkastro.github.io/gnu_linux/ubuntu/downgrade_libnss3/</guid>
+      <description>Cuando deja de funcionar algun programa por que se actualizó alguna librería es necesario instalar la version antigua nuevamente. Para instalar una versíon antigua de libnss3 en ubuntu 15.10 hay que usar los siguientes comandos
+apt-get install libnss3=2:3.19.2-1ubuntu1 libnss3-nssdb=2:3.19.2-1ubuntu1 libnss3-1d=2:3.19.2-1ubuntu1 ecryptfs-utils=108-0ubuntu1 apt-mark hold libnss3 libnss3-nssdb libnss3-1d ecryptfs-utils </description>
+    </item>
+    
+    <item>
+      <title>Actualización limpia de Ubuntu Feisty a Gutsy en Mac Mini</title>
+      <link>https://blogkastro.github.io/gnu_linux/ubuntu/actualizacion_limpia_de_ubuntu_feisty_a_gutsy_en_mac_mini/</link>
+      <pubDate>Thu, 25 Oct 2007 13:13:52 +0000</pubDate>
+      
+      <guid>https://blogkastro.github.io/gnu_linux/ubuntu/actualizacion_limpia_de_ubuntu_feisty_a_gutsy_en_mac_mini/</guid>
+      <description>El 19 de Octubre baje la imagen del CD de Ubuntu Gutsy y no podía esperar para probarlo, lo instale primero en un Pentium 4 y después en un clon Core 2 duo, hoy finalmente he decidido instalarlo en mi mac mini. No deseo hacer el upgrade por medio de Synaptic porque pienso que hay la posibilidad de que algunos paquetes tengan problemas, y pienso hacer una actualización limpia . Estoy escribiendo esta guía mientras la actualizo.</description>
+    </item>
+    
+    <item>
+      <title>Conectarse a internet con Ubuntu &#43; Nokia 2270 &#43; cable DKU-5 a Alegro PCS</title>
+      <link>https://blogkastro.github.io/gnu_linux/ubuntu/conectarse_a_internet_con_ubuntu_nokia_2270_cable_dku5_a_alegro_pcs/</link>
+      <pubDate>Thu, 18 Oct 2007 13:13:52 +0000</pubDate>
+      
+      <guid>https://blogkastro.github.io/gnu_linux/ubuntu/conectarse_a_internet_con_ubuntu_nokia_2270_cable_dku5_a_alegro_pcs/</guid>
+      <description>Cuando compré el cable DKU-5 para conectarme a internet a través de el celular me vino con un CD de instalación con una presentación multimedia, donde debes seguir una serie de complicados pasos que conectarte a internet por primera vez, además de que debes recordar en que puerto USB conectaste el cable y siempre usar ese puerto cada vez que quieras usarlo.
+Bueno en GNU/linux la historia es más sencilla, basta con hacer lo siguiente.</description>
+    </item>
+    
+    <item>
+      <title>Configurar monitor Acer AL1916W en Ubuntu 7.04</title>
+      <link>https://blogkastro.github.io/gnu_linux/ubuntu/configurar_monitor_acer_al1916w_en_ubuntu_704/</link>
+      <pubDate>Sat, 06 Oct 2007 13:13:52 +0000</pubDate>
+      
+      <guid>https://blogkastro.github.io/gnu_linux/ubuntu/configurar_monitor_acer_al1916w_en_ubuntu_704/</guid>
+      <description>Hace unas semanas tengo una pantalla ACER AL1916W de 19 pulgadas,
+realmente vale la pena, tengo un poco mas de espacio y comodidad. No tuve ningún problema en hacerla funcionar con OS X , arrancar el sistema fue suficiente para que la pantalla funcione con la resolución correcta.
+En Ubuntu me tardé un par de días en que funcione correctamente. La resolucion de 1280x1024, hace que todos los objetos se vean alargados.</description>
+    </item>
+    
+  </channel>
+</rss>

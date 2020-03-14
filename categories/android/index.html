@@ -1,0 +1,448 @@
+<!doctype html>
+<html amp lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+    		<title>Mi Blog</title>
+		<link rel="canonical" href="https://blogkastro.github.io/categories/android/" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		
+		<meta name="description" content="" />
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+		<noscript>
+			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+		</noscript>
+		<link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+                <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+		<style amp-custom>
+html{
+	font-size:1.2rem;
+	line-height: 1.5;
+	color:#666;
+	font-family: "Open Sans Condensed",sans-serif;
+}
+body{
+	margin:0;
+	padding:0;
+}
+p{
+	font-size:1rem;
+}
+h1, h2, h3, h4, h5{
+	font-family: "Ovo",sans-serif;
+	line-height:1.1;
+}
+h1 {
+    font-size: 1.4em;
+}
+h2{
+	font-size:1.2em;
+}
+a{
+	color:#0B7A2A;
+	text-decoration:none;
+}
+pre{
+	margin:0;
+}
+header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #ccc;
+    padding:1rem;
+    background: #0B7A2A;
+    color: white;
+}
+header > h1, header > h5 {
+	margin:0;
+}
+header > h1 > a{
+	color:white;
+}
+header h5 {
+	font-family:"Open Sans Condensed",sans-serif;
+	font-weight:400;
+}
+main {
+	padding:1.5rem;
+	width: calc(100% - 250px);
+	float: left;
+	box-sizing: border-box;
+	border-left:solid 1px #EEE;
+}
+section.summary {
+    border-bottom: solid 4px #EEE;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+time {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: none repeat scroll 0% 0% #FFF;
+    padding: 0px;
+    border-radius: 10px;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 20px;
+    border: solid 3px green;
+    font-family: "Open Sans Condensed",sans-serif;
+    font-weight: normal;
+}
+time .day {
+    float: left;
+    width: 100%;
+    font-size: 27px;
+    line-height: 24px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+time .month {
+    float: left;
+    width: 100%;
+    font-size: 21px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 0;
+    background: green;
+    color: white;
+}
+time .year {
+    float: left;
+    width: 100%;
+    font-size: 13px;
+}
+.month01:before {
+    content: "ENE";
+}
+.month02:before {
+    content: "FEB";
+}
+.month03:before {
+    content: "MAR";
+}
+.month04:before {
+    content: "ABR";
+}
+.month05:before {
+    content: "MAY";
+}
+.month06:before {
+    content: "JUN";
+}
+.month07:before {
+    content: "JUL";
+}
+.month08:before {
+    content: "AGO";
+}
+.month09:before {
+    content: "SEP";
+}
+.month10:before {
+    content: "OCT";
+}
+.month11:before {
+    content: "NOV";
+}
+.month12:before {
+    content: "DEC";
+}
+code {
+    float: left;
+    width: 100%;
+    padding: 3%;
+    border: solid 1px #CCC;
+    box-sizing:border-box;
+    overflow: auto;
+    margin: 0.5rem 0;
+    font-size: 0.8em;
+}
+#post_categories a:after {
+    content: ",";
+}
+#post_categories a:last-child:after {
+    display: none;
+}
+footer {
+	padding: 1.5rem;
+	float: left;
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	border-top: solid 1px #EEE;
+}
+#license {
+    margin-bottom: 20px;
+}
+#license amp-img {
+    margin-right: 5px;
+}
+section#pagination:empty {
+	display:none;
+}
+section#paginator {
+	height:30px;
+}
+a#next {
+    float: right;
+}
+aside#sidebar {
+    width: 250px;
+    float: left;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: #EEE;
+    z-index:1;
+}
+aside#sidebar > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.8;
+}
+footer small {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    float: left;
+    width: 100%;
+    padding: 0 3rem;
+    box-sizing: border-box;
+}
+div#disqus_thread {
+    margin-top: 2rem;
+}
+a#menu_button span,
+a#menu_button_close span {
+    float: left;
+    width: 70%;
+    height: 4px;
+    margin: 3px 4px;
+    background: none repeat scroll 0% 0% #FFF;
+    border-radius: 5px;
+}
+a#menu_button,
+a#menu_button_close {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 40px;
+    display:none;
+}
+article > * {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+main > section, main > section > article {
+    float: left;
+    width: 100%;
+}
+article > figure {
+    margin: 0;
+    padding: 1rem 0;
+    max-width:1000px;
+}
+main > section.summary > article {
+	width: calc(100% - 110px);
+	float:right;
+}
+main > section.summary > article > p {
+    margin-top: 0;
+}
+figure.max300 {
+	max-width:300px;
+}
+figure.max400 {
+	max-width:400px;
+}
+figure.max500 {
+	max-width:500px;
+}
+figure.max600 {
+	max-width:600px;
+}
+@media (max-width:767px) {
+	header > h5 {
+		display:none;
+	}
+	a#menu_button {
+		display:block;
+	}
+	aside#sidebar {
+		margin-left:-250px;
+		transition-duration:1s;
+		position: absolute;
+    		border-radius: 0 0 1rem 0;
+	}
+	main {
+		width:100%;
+	}
+	body.show_menu aside#sidebar {
+	    margin-left: 0;
+	    box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
+	}
+	body.show_menu a#menu_button {
+		display:none;
+	}
+	body.show_menu a#menu_button_close {
+		display:block;
+	}
+}
+</style>
+
+
+		
+		<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+		<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>	
+	</head>
+	<body [class]="menuState.status">
+		
+		<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-NHBSGGK&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+
+
+	<body>
+
+<header>
+	<amp-state id="menuState">
+  		<script type="application/json">
+    			{
+      				"status": ""
+    			}
+  		</script>
+	</amp-state>
+	<a id="menu_button" on="tap:AMP.setState({menuState: {status : 'show_menu'}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<a id="menu_button_close" on="tap:AMP.setState({menuState: {status : ''}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+
+	<h1>
+		<a href="https://blogkastro.github.io/">Mi Blog</a>
+	</h1>
+	<h5>Programador Web, fanático del software libre, hardware libre y energía renovable. Quito Ecuador</h5>
+</header>
+
+
+<aside id="sidebar" >
+	<ul>
+		<li><a href="https://blogkastro.github.io/">Inicio</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/android"> Android (4)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/apache"> Apache (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/cocos-2d-x"> Cocos-2d-X (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css"> Css (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css3"> Css3 (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/firefox"> Firefox (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/gnu/linux"> Gnu/Linux (15)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/go"> Go (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/hugo"> Hugo (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ios"> Ios (2)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ndk"> Ndk (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/nexus"> Nexus (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/php"> Php (3)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/python"> Python (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/reprap"> Reprap (6)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/twitter"> Twitter (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ubuntu"> Ubuntu (5)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/wordpress"> Wordpress (2)</a></li>
+	
+	</ul>
+</aside>
+
+<main>
+   
+    <section class="summary">
+	<h2>
+			<time datetime="2014-03-14"><span class="day">14</span><span class="month month03"></span><span class="year">2014</span></time>
+
+
+		<a href="https://blogkastro.github.io/gnu_linux/cli/renombrar_archivos_de_imagenes_para_proyecto_android/">Renombrar archivos de imagenes para proyecto android</a>
+	</h2>
+	<article>
+		<p>Hoy tuve problemas con unas imagenes en mi proyecto android. Android no permite que los archivos tengan nombres con guiones, solo se permite subguiones. Para corregirlo rapidamente use el siguiente comando: Ya que la mejor forma de recordarlo en un futuro es compartirlo en mi blog, aqui esta y voy a explicar un poco cada parte de la instruccion: Busca los archivos que tengan guiones Muestra el nombre original del archivo y en la siquiente linea muestra el nombre donde fue remplazado el guion por guion bajo xargs organiza el nombre orginal y el… <a href="https://blogkastro.github.io/gnu_linux/cli/renombrar_archivos_de_imagenes_para_proyecto_android/">leer más »</a></p>
+	</article>
+</section>
+
+   
+    <section class="summary">
+	<h2>
+			<time datetime="2013-03-19"><span class="day">19</span><span class="month month03"></span><span class="year">2013</span></time>
+
+
+		<a href="https://blogkastro.github.io/android/errores_al_tratar_de_compilar_con_android_ndk/">Errores al tratar de compilar con Android NDK</a>
+	</h2>
+	<article>
+		<p>Hoy he estado trabajando en un proyecto interesante, descargue el codigo fuente de una aplicación android llamada android-eye que convierte dispositivos android en camaras ip, pero al tratar de compilar el codigo nativo usando el Android NDK me aparece el error Después de buscar en google encontre la solución. Al parecer el archivo AndroidManifest.xml tiene saltos de linea 
+ y hay que convertirlos a saltos de linea UNIX 
+, para corregirlo hay que usar dos2unix Pero luego me aparecio otro mensaje de error Despues de examinar el archivo y… <a href="https://blogkastro.github.io/android/errores_al_tratar_de_compilar_con_android_ndk/">leer más »</a></p>
+	</article>
+</section>
+
+   
+    <section class="summary">
+	<h2>
+			<time datetime="2012-12-04"><span class="day">04</span><span class="month month12"></span><span class="year">2012</span></time>
+
+
+		<a href="https://blogkastro.github.io/android/contador_mi_primera_aplicacion_android/">Contador Mi primera aplicación Android</a>
+	</h2>
+	<article>
+		<p>Hace dos semanas publique mi primera aplicacion android. Tally Counter en Google Play, Tally Counter en Amazon App Store, fue gratificante hacerlo ya que nunca me habia agradado Java y finalmente me siento a gusto con el lenguaje. Decidi crear una aplicación sencilla pero hacerla lo mejor posible, asi que escogi hacer un contador (Mejor empezar con algo sencillo que esperar años para terminar y publicar algo). Mi talento para diseñar es muy limitado, pero creo que cumpli el objetivo de tener una interface sencilla de usar. Creo que la parte… <a href="https://blogkastro.github.io/android/contador_mi_primera_aplicacion_android/">leer más »</a></p>
+	</article>
+</section>
+
+   
+    <section class="summary">
+	<h2>
+			<time datetime="2012-09-07"><span class="day">07</span><span class="month month09"></span><span class="year">2012</span></time>
+
+
+		<a href="https://blogkastro.github.io/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/">Instalando imagenes oficiales en Nexus S 4G</a>
+	</h2>
+	<article>
+		<p>Me encuentro tratando de instalar android 4.0.4 en un Nexus S 4G Ya instale el sdk en mi computadora de escritorio y tengo fastboot en el path pero cuando corro el script flash-all.sh lo unico que ocurre es que el terminal se queda mostrandome el mensaje Esto se debe a que en ubuntu (GNU Linux) fastboot necesita ser ejecutado por root, para hacerlo debo escribir luego al ejecutar fastboot devices puedo ver el telefono en la lista, ahora si es posible ejecutar flash-all.sh Al hacerlo tuve un error de la versión del baseband del teléfono, para… <a href="https://blogkastro.github.io/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/">leer más »</a></p>
+	</article>
+</section>
+
+  
+
+  <section id="paginator">
+
+
+</section>
+
+</main>
+
+	<footer>
+		<div id="license">
+			<a rel="license" href="//creativecommons.org/licenses/by/3.0/"><amp-img alt="Licencia Creative Commons" src="//i.creativecommons.org/l/by/3.0/88x31.png" width="88" height="31" layout="fixed"></a><span id="license_text">Este obra está bajo una <a rel="license" href="//creativecommons.org/licenses/by/3.0/">licencia Creative Commons Atribución 3.0 Unported</a>.</span>
+		</div>
+		<small>Juan Castro is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com. / Juan Castro participa en el programa de afiliados de Amazon Services LLC, un programa diseñado para ganar comisiones por anunciar productos de amazon.com.</small>
+	</footer>
+</body>
+</html>
+
+

@@ -1,0 +1,485 @@
+<!doctype html>
+<html amp lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script async src="https://cdn.ampproject.org/v0.js"></script>
+    		<title>Mi Blog</title>
+		<link rel="canonical" href="https://blogkastro.github.io/gnu_linux/escritorio/guardar_claves_de_forma_segura_en_pidgin_241/" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		
+		<script type="application/ld+json">
+			{
+			  "@context": "http://schema.org",
+			  "@type": "Article",
+			  "headline": "Guardar claves de forma segura en Pidgin 2.4.1",
+			  "datePublished": "2008-09-11",
+			  "description": "Hace unos días estaba buscando los logs de las conversaciones guardadas en pidgin, y me sorprendió que al revisar el archivo accounts.xml encontré todas mis claves de MSN gmail y Yahoo en texto plano. Esto me dejo muy intranquilo, cualquiera puede saber mis claves de los servicios de correo. Afortunadamente encontré un parche que te permite crear una clave maestra para encriptar todas las claves. Así que como de costumbre empezaré con la guía para que puedan aplicar el parche en instalar Pidgin.Primero abrir el terminal y escribir:apt-get…",
+    			  "wordCount": 306
+			}
+		</script>
+		
+		<meta name="description" content="Hace unos días estaba buscando los logs de las conversaciones guardadas en pidgin, y me sorprendió que al revisar el archivo accounts.xml encontré todas mis claves de MSN gmail y Yahoo en texto plano. Esto me dejo muy intranquilo, cualquiera puede saber mis claves de los servicios de correo. Afortunadamente encontré un parche que te permite crear una clave maestra para encriptar todas las claves. Así que como de costumbre empezaré con la guía para que puedan aplicar el parche en instalar Pidgin.Primero abrir el terminal y escribir:apt-get…" />
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+		<noscript>
+			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+		</noscript>
+		<link href='https://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+                <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+		<style amp-custom>
+html{
+	font-size:1.2rem;
+	line-height: 1.5;
+	color:#666;
+	font-family: "Open Sans Condensed",sans-serif;
+}
+body{
+	margin:0;
+	padding:0;
+}
+p{
+	font-size:1rem;
+}
+h1, h2, h3, h4, h5{
+	font-family: "Ovo",sans-serif;
+	line-height:1.1;
+}
+h1 {
+    font-size: 1.4em;
+}
+h2{
+	font-size:1.2em;
+}
+a{
+	color:#0B7A2A;
+	text-decoration:none;
+}
+pre{
+	margin:0;
+}
+header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #ccc;
+    padding:1rem;
+    background: #0B7A2A;
+    color: white;
+}
+header > h1, header > h5 {
+	margin:0;
+}
+header > h1 > a{
+	color:white;
+}
+header h5 {
+	font-family:"Open Sans Condensed",sans-serif;
+	font-weight:400;
+}
+main {
+	padding:1.5rem;
+	width: calc(100% - 250px);
+	float: left;
+	box-sizing: border-box;
+	border-left:solid 1px #EEE;
+}
+section.summary {
+    border-bottom: solid 4px #EEE;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+time {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: none repeat scroll 0% 0% #FFF;
+    padding: 0px;
+    border-radius: 10px;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 20px;
+    border: solid 3px green;
+    font-family: "Open Sans Condensed",sans-serif;
+    font-weight: normal;
+}
+time .day {
+    float: left;
+    width: 100%;
+    font-size: 27px;
+    line-height: 24px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+time .month {
+    float: left;
+    width: 100%;
+    font-size: 21px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 0;
+    background: green;
+    color: white;
+}
+time .year {
+    float: left;
+    width: 100%;
+    font-size: 13px;
+}
+.month01:before {
+    content: "ENE";
+}
+.month02:before {
+    content: "FEB";
+}
+.month03:before {
+    content: "MAR";
+}
+.month04:before {
+    content: "ABR";
+}
+.month05:before {
+    content: "MAY";
+}
+.month06:before {
+    content: "JUN";
+}
+.month07:before {
+    content: "JUL";
+}
+.month08:before {
+    content: "AGO";
+}
+.month09:before {
+    content: "SEP";
+}
+.month10:before {
+    content: "OCT";
+}
+.month11:before {
+    content: "NOV";
+}
+.month12:before {
+    content: "DEC";
+}
+code {
+    float: left;
+    width: 100%;
+    padding: 3%;
+    border: solid 1px #CCC;
+    box-sizing:border-box;
+    overflow: auto;
+    margin: 0.5rem 0;
+    font-size: 0.8em;
+}
+#post_categories a:after {
+    content: ",";
+}
+#post_categories a:last-child:after {
+    display: none;
+}
+footer {
+	padding: 1.5rem;
+	float: left;
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	border-top: solid 1px #EEE;
+}
+#license {
+    margin-bottom: 20px;
+}
+#license amp-img {
+    margin-right: 5px;
+}
+section#pagination:empty {
+	display:none;
+}
+section#paginator {
+	height:30px;
+}
+a#next {
+    float: right;
+}
+aside#sidebar {
+    width: 250px;
+    float: left;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: #EEE;
+    z-index:1;
+}
+aside#sidebar > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.8;
+}
+footer small {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    float: left;
+    width: 100%;
+    padding: 0 3rem;
+    box-sizing: border-box;
+}
+div#disqus_thread {
+    margin-top: 2rem;
+}
+a#menu_button span,
+a#menu_button_close span {
+    float: left;
+    width: 70%;
+    height: 4px;
+    margin: 3px 4px;
+    background: none repeat scroll 0% 0% #FFF;
+    border-radius: 5px;
+}
+a#menu_button,
+a#menu_button_close {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 40px;
+    display:none;
+}
+article > * {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+main > section, main > section > article {
+    float: left;
+    width: 100%;
+}
+article > figure {
+    margin: 0;
+    padding: 1rem 0;
+    max-width:1000px;
+}
+main > section.summary > article {
+	width: calc(100% - 110px);
+	float:right;
+}
+main > section.summary > article > p {
+    margin-top: 0;
+}
+figure.max300 {
+	max-width:300px;
+}
+figure.max400 {
+	max-width:400px;
+}
+figure.max500 {
+	max-width:500px;
+}
+figure.max600 {
+	max-width:600px;
+}
+@media (max-width:767px) {
+	header > h5 {
+		display:none;
+	}
+	a#menu_button {
+		display:block;
+	}
+	aside#sidebar {
+		margin-left:-250px;
+		transition-duration:1s;
+		position: absolute;
+    		border-radius: 0 0 1rem 0;
+	}
+	main {
+		width:100%;
+	}
+	body.show_menu aside#sidebar {
+	    margin-left: 0;
+	    box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
+	}
+	body.show_menu a#menu_button {
+		display:none;
+	}
+	body.show_menu a#menu_button_close {
+		display:block;
+	}
+}
+</style>
+
+
+		
+		<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+		<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>	
+	</head>
+	<body [class]="menuState.status">
+		
+		<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-NHBSGGK&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+
+<header>
+	<amp-state id="menuState">
+  		<script type="application/json">
+    			{
+      				"status": ""
+    			}
+  		</script>
+	</amp-state>
+	<a id="menu_button" on="tap:AMP.setState({menuState: {status : 'show_menu'}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+	<a id="menu_button_close" on="tap:AMP.setState({menuState: {status : ''}})">
+		<span></span>
+		<span></span>
+		<span></span>
+	</a>
+
+	<h1>
+		<a href="https://blogkastro.github.io/">Mi Blog</a>
+	</h1>
+	<h5>Programador Web, fanático del software libre, hardware libre y energía renovable. Quito Ecuador</h5>
+</header>
+
+
+<aside id="sidebar" >
+	<ul>
+		<li><a href="https://blogkastro.github.io/">Inicio</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/android"> Android (4)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/apache"> Apache (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/cocos-2d-x"> Cocos-2d-X (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css"> Css (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/css3"> Css3 (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/firefox"> Firefox (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/gnu/linux"> Gnu/Linux (15)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/go"> Go (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/hugo"> Hugo (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ios"> Ios (2)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ndk"> Ndk (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/nexus"> Nexus (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/php"> Php (3)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/python"> Python (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/reprap"> Reprap (6)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/twitter"> Twitter (1)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/ubuntu"> Ubuntu (5)</a></li>
+	
+		<li><a href="https://blogkastro.github.io/categories/wordpress"> Wordpress (2)</a></li>
+	
+	</ul>
+</aside>
+
+<main>
+	<section>
+			<time datetime="2008-09-11"><span class="day">11</span><span class="month month09"></span><span class="year">2008</span></time>
+
+
+		<h2>Guardar claves de forma segura en Pidgin 2.4.1</h2>
+	</section>
+	<section>
+		<article>
+			<p>Hace unos días estaba buscando los logs de las conversaciones guardadas  en pidgin, y me sorprendió que al revisar el archivo accounts.xml  encontré todas mis claves de MSN gmail y Yahoo en texto plano. Esto me  dejo muy intranquilo, cualquiera puede saber mis claves de los servicios  de correo. Afortunadamente encontré un parche que te permite crear una  clave maestra para encriptar todas las claves. Así que como de costumbre  empezaré con la guía para que puedan aplicar el parche en instalar  Pidgin.</p>
+
+<p>Primero abrir el terminal y escribir:</p>
+
+<pre><code>apt-get source pidgin</code></pre>
+
+<p>Después de que se bajaron todos los archivos fuente de pidgin es necesario bajar todas las dependencias para poder compilarlo.</p>
+
+<pre><code>sudo apt-get build-dep pidgin</code></pre>
+
+<p>Luego  de haber descargado todas las dependencias es necesario bajar el parche  y ponerlo en la carpeta pidgin-2.4.1 que fue creada con el primer  comando, pueden encontrar en parche en la siguiente dirección <a href="https://blogkastro.github.io/files/pidgin-2.4_.1_master-password_.patch_.zip">pidgin-2.4.1_master-password.patch</a>.</p>
+
+<p>Para aplicar el parche</p>
+
+<pre><code>cd pidgin-2.4.1/
+patch -p 1 < pidgin-2.4.1_master-password.patch</code></pre>
+
+<p>Una vez que el parche fue aplicado creamos los archivos .deb</p>
+
+<pre><code>sudo dpkg-buildpackage</code></pre>
+
+<p>El  proceso toma algunos minutos, al finalizar podras encontrar varios  archivos deb que hay que instalar , para amd64 tenemos que poner:</p>
+
+<pre><code>sudo dpkg -i ../pidgin_2.4.1-1ubuntu2.1_amd64.deb
+sudo dpkg -i ../pidgin-data_2.4.1-1ubuntu2.1_all.deb 
+sudo dpkg -i ../libpurple0_2.4.1-1ubuntu2.1_amd64.deb</code></pre>
+
+<p>Para i386:</p>
+
+<pre><code>sudo dpkg -i ../pidgin_2.4.1-1ubuntu2.1_i386.deb
+sudo dpkg -i ../pidgin-data_2.4.1-1ubuntu2.1_all.deb
+sudo dpkg -i ../libpurple0_2.4.1-1ubuntu2.1_i386.deb</code></pre>
+
+<p>Una vez instalados los paquetes al abrir pidgin, deben ir a al menu tools-&gt;preferences donde hay un nuevo tab <strong>Security</strong>, donde se pone una clave maestra</p>
+
+<figure class="max600">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/master-password-735327.png"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/master-password-735327.png 1500w, https://blogkastro.github.io/images/thumbs/1080w/master-password-735327.png 1080w, https://blogkastro.github.io/images/thumbs/900w/master-password-735327.png 900w, https://blogkastro.github.io/images/thumbs/800w/master-password-735327.png 800w, https://blogkastro.github.io/images/thumbs/700w/master-password-735327.png 700w, https://blogkastro.github.io/images/thumbs/600w/master-password-735327.png 600w, https://blogkastro.github.io/images/thumbs/500w/master-password-735327.png 500w, https://blogkastro.github.io/images/thumbs/400w/master-password-735327.png 400w, https://blogkastro.github.io/images/thumbs/300w/master-password-735327.png 300w, https://blogkastro.github.io/images/thumbs/200w/master-password-735327.png 200w, https://blogkastro.github.io/images/thumbs/100w/master-password-735327.png 100w"
+  width="657"
+  height="639"
+  layout="responsive"
+  alt="Pidgin screenshot"></amp-img>
+	<span class="figcation">Pidgin screenshot</span>
+</figure>
+
+
+<p>De  ahora en adelante siempre que se abra pidgin aparece un cuadro de  dialogo pidiendo la clave que decodifica nuestras contraseñas  encriptadas</p>
+
+<figure class="max300">
+	<amp-img src="https://blogkastro.github.io/images/thumbs/1500w/ask_password-711620.png"
+  srcset="https://blogkastro.github.io/images/thumbs/1500w/ask_password-711620.png 1500w, https://blogkastro.github.io/images/thumbs/1080w/ask_password-711620.png 1080w, https://blogkastro.github.io/images/thumbs/900w/ask_password-711620.png 900w, https://blogkastro.github.io/images/thumbs/800w/ask_password-711620.png 800w, https://blogkastro.github.io/images/thumbs/700w/ask_password-711620.png 700w, https://blogkastro.github.io/images/thumbs/600w/ask_password-711620.png 600w, https://blogkastro.github.io/images/thumbs/500w/ask_password-711620.png 500w, https://blogkastro.github.io/images/thumbs/400w/ask_password-711620.png 400w, https://blogkastro.github.io/images/thumbs/300w/ask_password-711620.png 300w, https://blogkastro.github.io/images/thumbs/200w/ask_password-711620.png 200w, https://blogkastro.github.io/images/thumbs/100w/ask_password-711620.png 100w"
+  width="305"
+  height="145"
+  layout="responsive"
+  alt="Master Password"></amp-img>
+	<span class="figcation">Master Password</span>
+</figure>
+
+
+<p>Si  no quieren realizar todo el proceso , he subido los archivos deb a mi  servidor, claro que no ofrezco garantias y tienen que instalarlos bajo  su propio riesgo</p>
+
+<p><a href="https://blogkastro.github.io/files/pidgin_2.4_.1-1ubuntu2_.1_i386_.deb_.zip">
+pidgin_2.4.1-1ubuntu2.1_i386.deb</a></p>
+
+<p><a href="https://blogkastro.github.io/files/pidgin_2.4_.1-1ubuntu2_.1_amd64_.deb_.zip">
+pidgin_2.4.1-1ubuntu2.1_amd64.deb</a></p>
+
+<p><a href="https://blogkastro.github.io/files/pidgin-data_2.4_.1-1ubuntu2_.1_all_.deb_.zip">
+pidgin-data_2.4.1-1ubuntu2.1_all.deb</a></p>
+
+<p><a href="https://blogkastro.github.io/files/libpurple0_2.4_.1-1ubuntu2_.1_i386_.deb_.zip">
+libpurple0_2.4.1-1ubuntu2.1_i386.deb</a></p>
+
+<p><a href="https://blogkastro.github.io/files/libpurple0_2.4_.1-1ubuntu2_.1_amd64_.deb_.zip">
+libpurple0_2.4.1-1ubuntu2.1_amd64.deb</a></p>
+
+		</article>
+	</section>
+	<div id="post_categories">
+		Categorias: 
+		
+			<a href="https://blogkastro.github.io/categories/gnu/linux"> GNU/Linux </a>
+		
+	</div>
+</main>
+	<footer>
+		<div id="license">
+			<a rel="license" href="//creativecommons.org/licenses/by/3.0/"><amp-img alt="Licencia Creative Commons" src="//i.creativecommons.org/l/by/3.0/88x31.png" width="88" height="31" layout="fixed"></a><span id="license_text">Este obra está bajo una <a rel="license" href="//creativecommons.org/licenses/by/3.0/">licencia Creative Commons Atribución 3.0 Unported</a>.</span>
+		</div>
+		<small>Juan Castro is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com. / Juan Castro participa en el programa de afiliados de Amazon Services LLC, un programa diseñado para ganar comisiones por anunciar productos de amazon.com.</small>
+	</footer>
+</body>
+</html>
+
