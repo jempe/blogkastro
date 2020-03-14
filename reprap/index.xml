@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Repraps on Mi Blog</title>
-    <link>https://blogkastro.github.io/reprap/</link>
+    <link>https://jempe.github.io/blogkastro.github.io/reprap/</link>
     <description>Recent content in Repraps on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Mon, 15 Sep 2014 00:56:41 +0000</lastBuildDate>
     
-	<atom:link href="https://blogkastro.github.io/reprap/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro.github.io/reprap/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Usar objetos sin terminar</title>
-      <link>https://blogkastro.github.io/reprap/usar_objetos_sin_terminar/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/reprap/usar_objetos_sin_terminar/</link>
       <pubDate>Mon, 15 Sep 2014 00:56:41 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/reprap/usar_objetos_sin_terminar/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/reprap/usar_objetos_sin_terminar/</guid>
       <description>Objetos para sujetar router   Objetos para sujetar router  Al pensar por primera vez en la impresión 3D no imagine que uno de los problemas que iba a tener es la gran cantidad de objetos sin terminar. Muchas cosas pueden suceder mientras se imprime, Se va la electricidad, problemas de software, problemas mecánicos, etc. Al principio por cada impresión exitosa, tenia 3 objetos con fallas. Con el tiempo se ha ido acumulando y hoy tengo una funda llena de objetos sin terminar.</description>
     </item>
     
     <item>
       <title>Resetear extrusor antes de imprimir</title>
-      <link>https://blogkastro.github.io/reprap/resetear_extrusor_antes_de_imprimir/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/reprap/resetear_extrusor_antes_de_imprimir/</link>
       <pubDate>Mon, 10 Jun 2013 01:23:08 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/reprap/resetear_extrusor_antes_de_imprimir/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/reprap/resetear_extrusor_antes_de_imprimir/</guid>
       <description>He tenido problemas con mis ultimas impresiones y algo que resulta muy frustrante es que cuando falla una impresion y trato de imprimir nuevamente el extrusor devuelve el filamento hacia el carrete en lugar de empujarlo hacia la superficie de impresión. Esto se debe a que al detener la impresion los valores de x, y, z vuelven a 0 pero el valor de el extrusor no lo hace.
 Para corregirlo me voy a asegurar de poner lo siguiente en la primera linea de todos los archivos para imprimir G92 E0</description>
     </item>
     
     <item>
       <title>Configurando skeinforge</title>
-      <link>https://blogkastro.github.io/reprap/configurando_skeinforge/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/reprap/configurando_skeinforge/</link>
       <pubDate>Tue, 09 Oct 2012 01:23:08 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/reprap/configurando_skeinforge/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/reprap/configurando_skeinforge/</guid>
       <description>He tenido problemas con mis impresiones, asi que decidi eliminar mi configuración de skeinforge y empezar de nuevo con los valores predeterminados, Hay muchos parametros asi que este sera un recordatorio de como configurar cada uno para cuando lo vuelva a hacer en el futuro.
 Rafts Este el primer parámetro que recuerdo que debo inhabilitar, raft crea una malla en las primeras capas, sobre esta descansa la pieza impresa, realmente no me es útil, ademas que despues debo eliminarla, asi que se desperdicia material y tiempo  skeinforge screenshot  Dimension En esta pestaña se encuentra Extruder Retraction Speed, esta es la velocidad a la que se mueve el extrusor cuando no esta extruyendo, el valor predeterminado es 1 y resulta muy lento, yo suelo cambiarlo a 15</description>
     </item>
     
     <item>
       <title>Convertir Tarjeta SIM en Micro SIM</title>
-      <link>https://blogkastro.github.io/reprap/convertir_tarjeta_sim_en_micro_sim/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/reprap/convertir_tarjeta_sim_en_micro_sim/</link>
       <pubDate>Tue, 21 Aug 2012 03:42:33 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/reprap/convertir_tarjeta_sim_en_micro_sim/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/reprap/convertir_tarjeta_sim_en_micro_sim/</guid>
       <description>El fin de semana me pidieron que desbloquee un iPhone4, Lo trajeron de Estados Unidos y no lo pueden usar con las operadoras locales porque esta bloqueado. Utilice los pocos conocimientos que tengo acerca de iOS. Primero utlice Redsn0w para el Jailbreak y luego instale ultrasn0w. Pero para confirmar que funciona necesitaba una tarjeta Micro SIM. Para no estar buscando a alguien que me pudiera prestar una de estas tarjetas decidi cortar la SIM de mi teléfono.</description>
     </item>
     
     <item>
       <title>!Mi Reprap esta viva y se reproduce!</title>
-      <link>https://blogkastro.github.io/reprap/mi_reprap_esta_viva_y_se_reproduce/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/reprap/mi_reprap_esta_viva_y_se_reproduce/</link>
       <pubDate>Thu, 12 Jul 2012 03:03:00 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/reprap/mi_reprap_esta_viva_y_se_reproduce/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/reprap/mi_reprap_esta_viva_y_se_reproduce/</guid>
       <description>Mi impresora 3D esta viva finalmente. No se si hay mas repraps en Quito, pero estoy seguro de que en algunos meses habrá algunas ya que estoy creando las piezas para armar otra impresora. Este video muestra como funciona.
  He dedicado unas cuantas semanas a la calibración de mi impresora Prusa Mendel y parece que finalmente la he domado, despues de un largo proceso de prueba y error he encontrado la configuracion adecuada.</description>
     </item>
     
     <item>
       <title>La primera impresión exitosa de mi Prusa Mendel</title>
-      <link>https://blogkastro.github.io/reprap/la_primera_impresion_de_mi_prusa_mendel/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/reprap/la_primera_impresion_de_mi_prusa_mendel/</link>
       <pubDate>Sat, 12 May 2012 03:13:07 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/reprap/la_primera_impresion_de_mi_prusa_mendel/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/reprap/la_primera_impresion_de_mi_prusa_mendel/</guid>
       <description>Armar una impresora 3D es un proceso largo que requiere mucha paciencia, yo decidí armar la mía hace casi un año. Empeza a pedir las partes impresas, los componentes electronicos y a buscar las piezas que pueda conseguir en la ciudad.Ha sido un proceso muy intersante y finalmente ha empezado a rendir frutos hoy hice mi primera impresión exitosa usando filamento PLA. Un cojinete para otra impresora ha sido lo primero que he podido crear.</description>
     </item>
     

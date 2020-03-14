@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Mi Blog</title>
-    <link>https://blogkastro.github.io/categories/python/</link>
+    <link>https://jempe.github.io/blogkastro.github.io/categories/python/</link>
     <description>Recent content in Python on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Thu, 12 Jul 2012 03:33:35 +0000</lastBuildDate>
     
-	<atom:link href="https://blogkastro.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Como descargar la última version estable de wordpress</title>
-      <link>https://blogkastro.github.io/php/wordpress/como_descargar_la_ultima_version_estable_de_wordpress/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/php/wordpress/como_descargar_la_ultima_version_estable_de_wordpress/</link>
       <pubDate>Thu, 12 Jul 2012 03:33:35 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/php/wordpress/como_descargar_la_ultima_version_estable_de_wordpress/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/php/wordpress/como_descargar_la_ultima_version_estable_de_wordpress/</guid>
       <description>Wordpress ha resultado siendo un verdadero dolor de cabeza en las últimas semanas. He tenido que limpiar algunos sitios de clientes que han sido hackeados. No actualizar a tiempo un sitio wordpress es una invitación para que inserten links de viagra o malware en el contenido del sitio. Estoy tratando de crear unos cron jobs que revisen si hay sitios desactualizados en mi servidor y si es posible que se actualizen automaticamente.</description>
     </item>
     

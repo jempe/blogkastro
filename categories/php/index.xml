@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Php on Mi Blog</title>
-    <link>https://blogkastro.github.io/categories/php/</link>
+    <link>https://jempe.github.io/blogkastro.github.io/categories/php/</link>
     <description>Recent content in Php on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Thu, 03 Oct 2013 03:24:08 +0000</lastBuildDate>
     
-	<atom:link href="https://blogkastro.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Múltiples versiones de PHP en Ubuntu</title>
-      <link>https://blogkastro.github.io/php/multiples_versiones_php_en_ubuntu/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/php/multiples_versiones_php_en_ubuntu/</link>
       <pubDate>Thu, 03 Oct 2013 03:24:08 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/php/multiples_versiones_php_en_ubuntu/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/php/multiples_versiones_php_en_ubuntu/</guid>
       <description>Recientemente actualice mi Ubuntu a la ultima version pero tuve un problema con un proyecto que requeria PHP 5.3 para funcionar. Es realmente util tener varias versiones de PHP instaladas para estos casos. Encontre phpbrew que hace que la labor de compilar las versiones de php sea mucho mas sencillo. Con la siguiente instruccion instale PHP 5.3 listo para funcionar con fastcgi y mysql phpbrew install php-5.3.23 +default+cgi+mysql Luego tuve un pequeño problema con el socket unix que estaba en una dirección incorrecta /tmp/mysql.</description>
     </item>
     
     <item>
       <title>Corregir feeds de twitter en Wordpress</title>
-      <link>https://blogkastro.github.io/php/wordpress/corregir_feeds_de_twitter/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/php/wordpress/corregir_feeds_de_twitter/</link>
       <pubDate>Mon, 15 Oct 2012 03:33:35 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/php/wordpress/corregir_feeds_de_twitter/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/php/wordpress/corregir_feeds_de_twitter/</guid>
       <description>Hoy un amigo me pidio ayuda porque el feed de twitter de su sitio web dejo de funcionar. Su sitio contiene el portafolio de sus trabajos con piezas muy interesantes si desean visitarlo. http://www.mujica-tmp.com/,&amp;nbsp; Asi que me puse a investigar y la direccion del twitter parece haber cambiado.
 Esta es la direccion anterior
 http://twitter.com/statuses/user_timeline.json?screen_name=...
@@ -36,10 +36,10 @@ Asi que si tienen el mismo problema pueden solucionarlo cambiando las direccione
     
     <item>
       <title>Como descargar la última version estable de wordpress</title>
-      <link>https://blogkastro.github.io/php/wordpress/como_descargar_la_ultima_version_estable_de_wordpress/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/php/wordpress/como_descargar_la_ultima_version_estable_de_wordpress/</link>
       <pubDate>Thu, 12 Jul 2012 03:33:35 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/php/wordpress/como_descargar_la_ultima_version_estable_de_wordpress/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/php/wordpress/como_descargar_la_ultima_version_estable_de_wordpress/</guid>
       <description>Wordpress ha resultado siendo un verdadero dolor de cabeza en las últimas semanas. He tenido que limpiar algunos sitios de clientes que han sido hackeados. No actualizar a tiempo un sitio wordpress es una invitación para que inserten links de viagra o malware en el contenido del sitio. Estoy tratando de crear unos cron jobs que revisen si hay sitios desactualizados en mi servidor y si es posible que se actualizen automaticamente.</description>
     </item>
     

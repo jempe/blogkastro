@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nexus on Mi Blog</title>
-    <link>https://blogkastro.github.io/categories/nexus/</link>
+    <link>https://jempe.github.io/blogkastro.github.io/categories/nexus/</link>
     <description>Recent content in Nexus on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Fri, 07 Sep 2012 14:54:34 +0000</lastBuildDate>
     
-	<atom:link href="https://blogkastro.github.io/categories/nexus/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro.github.io/categories/nexus/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Instalando imagenes oficiales en Nexus S 4G</title>
-      <link>https://blogkastro.github.io/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/</link>
       <pubDate>Fri, 07 Sep 2012 14:54:34 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/</guid>
       <description>Me encuentro tratando de instalar android 4.0.4 en un Nexus S 4G
 Ya instale el sdk en mi computadora de escritorio y tengo fastboot en el path pero cuando corro el script flash-all.sh lo unico que ocurre es que el terminal se queda mostrandome el mensaje
 &amp;lt; waiting for device &amp;gt; Esto se debe a que en ubuntu (GNU Linux) fastboot necesita ser ejecutado por root, para hacerlo debo escribir</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ios on Mi Blog</title>
-    <link>https://blogkastro.github.io/ios/</link>
+    <link>https://jempe.github.io/blogkastro.github.io/ios/</link>
     <description>Recent content in Ios on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Tue, 24 Sep 2013 14:43:19 +0000</lastBuildDate>
     
-	<atom:link href="https://blogkastro.github.io/ios/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro.github.io/ios/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Problemas desarrollando para iOs</title>
-      <link>https://blogkastro.github.io/ios/problemas_desarrollando_para_ios/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/ios/problemas_desarrollando_para_ios/</link>
       <pubDate>Tue, 24 Sep 2013 14:43:19 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/ios/problemas_desarrollando_para_ios/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/ios/problemas_desarrollando_para_ios/</guid>
       <description>Hace poco termine la primera versión de un juego de Hockey multiplataforma, estoy usando cocos 2d x y las cosas han ido bastante bien. corre en Android, Linux y iOs. Recientemente estuve portandolo a iOs y me encontre con un montón de problemas, asi que para recordar como los solucione los estoy compartiendo en mi blog.
 Primer problema: errores al tratar de importar mi private key en otra computadora.
 Keychain me mostraba el siguiente mensaje de error despues de intentar importa un archivo p12 que tenia mi private key &amp;ldquo;An error has ocurred, Unable to import an item the contents of this item cannot be retrieved&amp;rdquo;.</description>
@@ -24,10 +24,10 @@ Keychain me mostraba el siguiente mensaje de error despues de intentar importa u
     
     <item>
       <title>Problemas con certificados iOs</title>
-      <link>https://blogkastro.github.io/ios/problemas_con_certificados_ios/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/ios/problemas_con_certificados_ios/</link>
       <pubDate>Fri, 10 May 2013 14:47:18 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/ios/problemas_con_certificados_ios/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/ios/problemas_con_certificados_ios/</guid>
       <description>Hace una semana volvi a instalar el sistema de mi mac mini pero cuando trate de correr las aplicaciones que he desarrollado en mi iphone recibi un extraño mensaje de error.
 /Users/name/Library/Developer/Xcode/DerivedData/KDCappital-cqxvjckfncbflehataoddobmpefq/Build/Products/Debug-iphoneos/KDCappital.app: CSSMERR_TP_NOT_TRUSTED Command /usr/bin/codesign failed with exit code 1
  Al revisar el keychain my certificado de Apple developer me muestra un mensaje de error que dice &amp;ldquo;This certificate was signed by an unknown authority&amp;rdquo;

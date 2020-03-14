@@ -4,21 +4,21 @@
 		<meta charset="utf-8">
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
     		<title>Mi Blog</title>
-		<link rel="canonical" href="https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/encontrar_carpetas_mas_grandes/" />
+		<link rel="canonical" href="https://jempe.github.io/blogkastro.github.io/android/moto_g/bootear_telefono_en_cuanto_se_carga/" />
 		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 		
 		<script type="application/ld+json">
 			{
 			  "@context": "http://schema.org",
 			  "@type": "Article",
-			  "headline": "Encontrar las carpetas y archivos más grandes",
-			  "datePublished": "2017-01-28",
-			  "description": "Cuando se necesita liberar espacio innecesario este comando es muy útil, busca cuanto ocupa cada archivo o carpeta y las ordena desde la más grande a la más pequeña...",
-    			  "wordCount": 37
+			  "headline": "Bootear teléfono en cuanto se empieza a cargar",
+			  "datePublished": "2020-03-14",
+			  "description": "Comandos necesarios para configurar un teléfono android, de tal forma que arranque el sistema en cuanto se conecta a el cargador",
+    			  "wordCount": 59
 			}
 		</script>
 		
-		<meta name="description" content="Cuando se necesita liberar espacio innecesario este comando es muy útil, busca cuanto ocupa cada archivo o carpeta y las ordena desde la más grande a la más pequeña..." />
+		<meta name="description" content="Comandos necesarios para configurar un teléfono android, de tal forma que arranque el sistema en cuanto se conecta a el cargador" />
 		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 		<noscript>
 			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
@@ -382,23 +382,29 @@ figure.max600 {
 
 <main>
 	<section>
-			<time datetime="2017-01-28"><span class="day">28</span><span class="month month01"></span><span class="year">2017</span></time>
+			<time datetime="2020-03-14"><span class="day">14</span><span class="month month03"></span><span class="year">2020</span></time>
 
 
-		<h2>Encontrar las carpetas y archivos más grandes</h2>
+		<h2>Bootear teléfono en cuanto se empieza a cargar</h2>
 	</section>
 	<section>
 		<article>
-			<p>Cuando se necesita liberar espacio innecesario este comando es muy útil, busca cuanto ocupa cada archivo o carpeta y las ordena desde la más grande a la más pequeña.</p>
+			<p>Primero es necesario que el teléfono este en modo fastboot. Para eso se puede conectar con el cable USB y utilizar el siguiente comando</p>
 
-<pre><code>du -s -h .[!.]* * | sort -h</code></pre>
+<pre><code>adb reboot bootloader</code></pre>
+
+<p>Una vez esta en modo fastboot utilizar el comando</p>
+
+<pre><code>fastboot oem-off-mode charge 0</code></pre>
+
+<p>Luego se reinicia el teléfono y cada vez que este apagado y se conecte el cargador. el teléfono arrancará.</p>
 
 		</article>
 	</section>
 	<div id="post_categories">
 		Categorias: 
 		
-			<a href="https://jempe.github.io/blogkastro.github.io/categories/gnu/linux"> GNU/Linux </a>
+			<a href="https://jempe.github.io/blogkastro.github.io/categories/android"> Android </a>
 		
 	</div>
 </main>

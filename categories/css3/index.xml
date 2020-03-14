@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Css3 on Mi Blog</title>
-    <link>https://blogkastro.github.io/categories/css3/</link>
+    <link>https://jempe.github.io/blogkastro.github.io/categories/css3/</link>
     <description>Recent content in Css3 on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Sun, 09 Sep 2012 15:33:38 +0000</lastBuildDate>
     
-	<atom:link href="https://blogkastro.github.io/categories/css3/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro.github.io/categories/css3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Arreglar problema de border-image en Firefox 15</title>
-      <link>https://blogkastro.github.io/css3/firefox/arreglar_problema_de_borderimage_en_firefox_15/</link>
+      <link>https://jempe.github.io/blogkastro.github.io/css3/firefox/arreglar_problema_de_borderimage_en_firefox_15/</link>
       <pubDate>Sun, 09 Sep 2012 15:33:38 +0000</pubDate>
       
-      <guid>https://blogkastro.github.io/css3/firefox/arreglar_problema_de_borderimage_en_firefox_15/</guid>
+      <guid>https://jempe.github.io/blogkastro.github.io/css3/firefox/arreglar_problema_de_borderimage_en_firefox_15/</guid>
       <description>La propiedad border-image me parecio grandiosa cuando la use por primera vez, antes debia cortar las imagenes manualmente y solia haber problemas cuando los bordes eran irregulares. Firefox 15 hizo algunos cambios a esta propiedad y uno de los sitios web en los que trabaje se dañó completamente debido a esto, me puse a investigar una solución y encontre que se hicieron algunos cambios en firefox.
 Ya no se usa el prefijo -moz, es decir que -moz-border-image ya no funciona, ahora hay que escribir border-image.</description>
     </item>
