@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gnu/Linux on Mi Blog</title>
-    <link>https://jempe.github.io/blogkastro.github.io/categories/gnu/linux/</link>
+    <link>https://jempe.github.io/blogkastro/categories/gnu/linux/</link>
     <description>Recent content in Gnu/Linux on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Sat, 28 Jan 2017 20:19:41 +0000</lastBuildDate>
     
-	<atom:link href="https://jempe.github.io/blogkastro.github.io/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Encontrar las carpetas y archivos más grandes</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/encontrar_carpetas_mas_grandes/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/encontrar_carpetas_mas_grandes/</link>
       <pubDate>Sat, 28 Jan 2017 20:19:41 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/encontrar_carpetas_mas_grandes/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/encontrar_carpetas_mas_grandes/</guid>
       <description>Cuando se necesita liberar espacio innecesario este comando es muy útil, busca cuanto ocupa cada archivo o carpeta y las ordena desde la más grande a la más pequeña.
 du -s -h .[!.]* * | sort -h </description>
     </item>
     
     <item>
       <title>Comandos útiles</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/comandos/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/comandos/</link>
       <pubDate>Tue, 17 May 2016 04:35:00 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/comandos/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/comandos/</guid>
       <description>Chequear la red ifconfig
 Desconectar adaptador de red ifconfig eth0 down
 Obtener dirección IP usando DHCP dhclient eth0
@@ -36,10 +36,10 @@ Ver usuario co acceso a bash cat /etc/passwd buscar usuarios con /bin/bash en lu
     
     <item>
       <title>Insertar salto de línea en archivo de texto</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/insertar_saltos_de_linea_en_texto/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/insertar_saltos_de_linea_en_texto/</link>
       <pubDate>Thu, 20 Nov 2014 04:35:00 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/insertar_saltos_de_linea_en_texto/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/insertar_saltos_de_linea_en_texto/</guid>
       <description>Comando para remplazar caracter
 find . -name &#34;*.jpg&#34; -size +400k -print0 | xargs -0 -I file convert -quality 85 file file Voy a explicar que hace cada bloque comenzando por el primero
 awk -v RS=&#34;&#34; &#39;{gsub (/},/,&#34;},\n&#34;)}1&#39; megamenu.json  megamenu_br.json </description>
@@ -47,68 +47,68 @@ awk -v RS=&#34;&#34; &#39;{gsub (/},/,&#34;},\n&#34;)}1&#39; megamenu.json  mega
     
     <item>
       <title>Reemplazar HTML entities por caracteres con tilde usando grep y sed</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/reemplazar_html_entities/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/reemplazar_html_entities/</link>
       <pubDate>Sat, 30 Aug 2014 04:35:00 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/reemplazar_html_entities/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/reemplazar_html_entities/</guid>
       <description>La versión anterior de este blog la cree usando un editor html (tinymce), el problema es que todos los caracteres especiales fueron reemplazados por html entities, con los siguientes comandos voy a cambiarlos.
 grep -rl &#34;&amp;amp;aacute;&#34; . | xargs sed -i &#39;s/&amp;amp;aacute;/á/g&#39; grep -rl &#34;&amp;amp;eacute;&#34; . | xargs sed -i &#39;s/&amp;amp;eacute;/é/g&#39; grep -rl &#34;&amp;amp;iacute;&#34; . | xargs sed -i &#39;s/&amp;amp;iacute;/í/g&#39; grep -rl &#34;&amp;amp;oacute;&#34; . | xargs sed -i &#39;s/&amp;amp;oacute;/ó/g&#39; grep -rl &#34;</description>
     </item>
     
     <item>
       <title>Comandos útiles para administrar un blog HUGO</title>
-      <link>https://jempe.github.io/blogkastro.github.io/go/hugo/comandos_utiles_para_blog_usando_hugo/</link>
+      <link>https://jempe.github.io/blogkastro/go/hugo/comandos_utiles_para_blog_usando_hugo/</link>
       <pubDate>Sat, 09 Aug 2014 12:17:00 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/go/hugo/comandos_utiles_para_blog_usando_hugo/</guid>
+      <guid>https://jempe.github.io/blogkastro/go/hugo/comandos_utiles_para_blog_usando_hugo/</guid>
       <description>Estuve buscando una herramienta útil para mejorar mi blog. No estoy muy contento con el sistema de administración actual. Prefiero usar mi editor de texto (Kate) en lugar de una interface web de administración.
 Deseaba convertir todo a archivos estáticos, y estaba creando una herramienta usando GO, pero de pronto me encontre con un proyecto interesante. HUGO es la herramienta que me ofrece todo lo que necesito, solo debo crear unos cuantos archivos html de una manera organizada y HUGO se encarga de poner todo en su lugar.</description>
     </item>
     
     <item>
       <title>Renombrar archivos de imagenes para proyecto android</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/renombrar_archivos_de_imagenes_para_proyecto_android/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/renombrar_archivos_de_imagenes_para_proyecto_android/</link>
       <pubDate>Fri, 14 Mar 2014 04:27:41 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/renombrar_archivos_de_imagenes_para_proyecto_android/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/renombrar_archivos_de_imagenes_para_proyecto_android/</guid>
       <description>Hoy tuve problemas con unas imagenes en mi proyecto android. Android no permite que los archivos tengan nombres con guiones, solo se permite subguiones. Para corregirlo rapidamente use el siguiente comando:
 find . -name &#34;*-*&#34; | sed -e &#39;p;s/-/_/g&#39; | xargs -n2 mv Ya que la mejor forma de recordarlo en un futuro es compartirlo en mi blog, aqui esta y voy a explicar un poco cada parte de la instruccion:</description>
     </item>
     
     <item>
       <title>Configurar proyecto Cocos2dx en Qt Creator GNU/Linux</title>
-      <link>https://jempe.github.io/blogkastro.github.io/cocos2dx/qt_creator/configurar_proyecto_cocos2dx_en_qt_creator_gnulinux/</link>
+      <link>https://jempe.github.io/blogkastro/cocos2dx/qt_creator/configurar_proyecto_cocos2dx_en_qt_creator_gnulinux/</link>
       <pubDate>Mon, 01 Apr 2013 04:30:51 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/cocos2dx/qt_creator/configurar_proyecto_cocos2dx_en_qt_creator_gnulinux/</guid>
+      <guid>https://jempe.github.io/blogkastro/cocos2dx/qt_creator/configurar_proyecto_cocos2dx_en_qt_creator_gnulinux/</guid>
       <description>Primero para poder compilar sin problemas de dependencias hay que crear una carpeta dentro de la carpeta donde se encuentra cocos2dx, en mi caso la llame cocos2dx_apps. Luego copiamos la carpeta HelloCpp y la copiamos en la nueva carpeta con el nombre de nuestro proyecto, en mi caso lo llame Prueba.
 Después abrimos Qt Creator y escojemos New File or Project Escojemos &amp;ldquo;Import Project&amp;rdquo; y de sus opciones &amp;ldquo;Import Existing Project&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Disminuir la calidad de archivos jpg usando la linea de comandos</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/disminuir_la_calidad_de_archivos_jpg_usando_la_linea_de_comandos/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/disminuir_la_calidad_de_archivos_jpg_usando_la_linea_de_comandos/</link>
       <pubDate>Tue, 05 Feb 2013 04:35:00 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/cli/disminuir_la_calidad_de_archivos_jpg_usando_la_linea_de_comandos/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/disminuir_la_calidad_de_archivos_jpg_usando_la_linea_de_comandos/</guid>
       <description>Recientemente tuve problemas con un sitio ya que usaba muchas imagenes grandes que habian sido guardadas en una calidad muy alta sin considerar que el tiempo de descarga para los visitantes iba a ser muy alto. Usando la línea de comandos reduje la calidad de las imagenes sin que sea notorio el deterioro debido a la compresion. Lo mejor fue que imagenes de 1.5 Mb se redujeron a 250Kb, asi que los tiempos de descarga se volvieron razonables.</description>
     </item>
     
     <item>
       <title>Instalar Wkhtmltopdf en CENTOS 6</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/administracion_servidor/instalar_wkhtmltopdf_en_centos_6/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/administracion_servidor/instalar_wkhtmltopdf_en_centos_6/</link>
       <pubDate>Wed, 30 Jan 2013 04:38:40 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/administracion_servidor/instalar_wkhtmltopdf_en_centos_6/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/administracion_servidor/instalar_wkhtmltopdf_en_centos_6/</guid>
       <description>Cuando se necesita convertir paginas html a pdf la mejor alternativa es wkhtmltopdf ya que usa el poder de webkit, he tenido muy buenos resultados, incluso imprime archivos svg embebidos en el html. Pero para poder usarlo es indispensable instalarlo y a veces es necesario tener permisos administrativos para hacerlo. En Ubuntu es tan sencillo como escribir sudo apt-get install wkhtmltopdf pero en CENTOS 6 el proceso es mucho mas complejo y lo describo a continuacion:</description>
     </item>
     
     <item>
       <title>Corregir resolución LightDM</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/corregir_resolucion_lightdm/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/corregir_resolucion_lightdm/</link>
       <pubDate>Sun, 18 Nov 2012 13:13:52 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/corregir_resolucion_lightdm/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/corregir_resolucion_lightdm/</guid>
       <description>Acabo de Instalar Ubuntu 12.10 y me agrada bastante pero he tenido problemas con la resolucion de LightDM asi que busque una solución y encontre que se puede añadir un script al archivo /etc/lightdm/lightdm.conf para obligarlo a que la resolución sea la adecuada.
 Esta es la línea que añadi al final
 display-setup-script=/usr/share/lightdmxrandr.sh Este es el contenido de el archivo /usr/share/lightdmxrandr.sh
@@ -117,48 +117,48 @@ display-setup-script=/usr/share/lightdmxrandr.sh Este es el contenido de el arch
     
     <item>
       <title>Downgrade de paquetes libnss3</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/downgrade_libnss3/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/downgrade_libnss3/</link>
       <pubDate>Sun, 18 Nov 2012 13:13:52 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/downgrade_libnss3/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/downgrade_libnss3/</guid>
       <description>Cuando deja de funcionar algun programa por que se actualizó alguna librería es necesario instalar la version antigua nuevamente. Para instalar una versíon antigua de libnss3 en ubuntu 15.10 hay que usar los siguientes comandos
 apt-get install libnss3=2:3.19.2-1ubuntu1 libnss3-nssdb=2:3.19.2-1ubuntu1 libnss3-1d=2:3.19.2-1ubuntu1 ecryptfs-utils=108-0ubuntu1 apt-mark hold libnss3 libnss3-nssdb libnss3-1d ecryptfs-utils </description>
     </item>
     
     <item>
       <title>Guardar claves de forma segura en Pidgin 2.4.1</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/escritorio/guardar_claves_de_forma_segura_en_pidgin_241/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/escritorio/guardar_claves_de_forma_segura_en_pidgin_241/</link>
       <pubDate>Thu, 11 Sep 2008 04:45:30 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/escritorio/guardar_claves_de_forma_segura_en_pidgin_241/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/escritorio/guardar_claves_de_forma_segura_en_pidgin_241/</guid>
       <description>Hace unos días estaba buscando los logs de las conversaciones guardadas en pidgin, y me sorprendió que al revisar el archivo accounts.xml encontré todas mis claves de MSN gmail y Yahoo en texto plano. Esto me dejo muy intranquilo, cualquiera puede saber mis claves de los servicios de correo. Afortunadamente encontré un parche que te permite crear una clave maestra para encriptar todas las claves. Así que como de costumbre empezaré con la guía para que puedan aplicar el parche en instalar Pidgin.</description>
     </item>
     
     <item>
       <title>Actualización limpia de Ubuntu Feisty a Gutsy en Mac Mini</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/actualizacion_limpia_de_ubuntu_feisty_a_gutsy_en_mac_mini/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/actualizacion_limpia_de_ubuntu_feisty_a_gutsy_en_mac_mini/</link>
       <pubDate>Thu, 25 Oct 2007 13:13:52 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/actualizacion_limpia_de_ubuntu_feisty_a_gutsy_en_mac_mini/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/actualizacion_limpia_de_ubuntu_feisty_a_gutsy_en_mac_mini/</guid>
       <description>El 19 de Octubre baje la imagen del CD de Ubuntu Gutsy y no podía esperar para probarlo, lo instale primero en un Pentium 4 y después en un clon Core 2 duo, hoy finalmente he decidido instalarlo en mi mac mini. No deseo hacer el upgrade por medio de Synaptic porque pienso que hay la posibilidad de que algunos paquetes tengan problemas, y pienso hacer una actualización limpia . Estoy escribiendo esta guía mientras la actualizo.</description>
     </item>
     
     <item>
       <title>Conectarse a internet con Ubuntu &#43; Nokia 2270 &#43; cable DKU-5 a Alegro PCS</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/conectarse_a_internet_con_ubuntu_nokia_2270_cable_dku5_a_alegro_pcs/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/conectarse_a_internet_con_ubuntu_nokia_2270_cable_dku5_a_alegro_pcs/</link>
       <pubDate>Thu, 18 Oct 2007 13:13:52 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/conectarse_a_internet_con_ubuntu_nokia_2270_cable_dku5_a_alegro_pcs/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/conectarse_a_internet_con_ubuntu_nokia_2270_cable_dku5_a_alegro_pcs/</guid>
       <description>Cuando compré el cable DKU-5 para conectarme a internet a través de el celular me vino con un CD de instalación con una presentación multimedia, donde debes seguir una serie de complicados pasos que conectarte a internet por primera vez, además de que debes recordar en que puerto USB conectaste el cable y siempre usar ese puerto cada vez que quieras usarlo.
 Bueno en GNU/linux la historia es más sencilla, basta con hacer lo siguiente.</description>
     </item>
     
     <item>
       <title>Configurar monitor Acer AL1916W en Ubuntu 7.04</title>
-      <link>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/configurar_monitor_acer_al1916w_en_ubuntu_704/</link>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/configurar_monitor_acer_al1916w_en_ubuntu_704/</link>
       <pubDate>Sat, 06 Oct 2007 13:13:52 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/gnu_linux/ubuntu/configurar_monitor_acer_al1916w_en_ubuntu_704/</guid>
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/configurar_monitor_acer_al1916w_en_ubuntu_704/</guid>
       <description>Hace unas semanas tengo una pantalla ACER AL1916W de 19 pulgadas,
 realmente vale la pena, tengo un poco mas de espacio y comodidad. No tuve ningún problema en hacerla funcionar con OS X , arrancar el sistema fue suficiente para que la pantalla funcione con la resolución correcta.
 En Ubuntu me tardé un par de días en que funcione correctamente. La resolucion de 1280x1024, hace que todos los objetos se vean alargados.</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Css on Mi Blog</title>
-    <link>https://jempe.github.io/blogkastro.github.io/categories/css/</link>
+    <link>https://jempe.github.io/blogkastro/categories/css/</link>
     <description>Recent content in Css on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Sat, 10 Aug 2013 14:58:48 +0000</lastBuildDate>
     
-	<atom:link href="https://jempe.github.io/blogkastro.github.io/categories/css/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro/categories/css/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CSS para sitios mobiles</title>
-      <link>https://jempe.github.io/blogkastro.github.io/css3/css_para_sitios_mobiles/</link>
+      <link>https://jempe.github.io/blogkastro/css3/css_para_sitios_mobiles/</link>
       <pubDate>Sat, 10 Aug 2013 14:58:48 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/css3/css_para_sitios_mobiles/</guid>
+      <guid>https://jempe.github.io/blogkastro/css3/css_para_sitios_mobiles/</guid>
       <description>He estado haciendo correcciones a sitios web para que se vean bien en dispositivos mobiles y encontre un par de recursos que me ayudaron a corregir algunos problemas.
 Uno de los problemas mas molestos y persistentes es que la pagina tiene un margen en la parte derecha a pesar de que no hay ningun elemento en ese lugar.&amp;nbsp; Para corregirlo cree un div que contiene todos los elemento de la pagina web y use el atributo css overflow de la siguiente manera:</description>
     </item>

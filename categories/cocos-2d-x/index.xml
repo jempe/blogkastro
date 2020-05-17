@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cocos 2d X on Mi Blog</title>
-    <link>https://jempe.github.io/blogkastro.github.io/categories/cocos-2d-x/</link>
+    <link>https://jempe.github.io/blogkastro/categories/cocos-2d-x/</link>
     <description>Recent content in Cocos 2d X on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Mon, 01 Apr 2013 04:30:51 +0000</lastBuildDate>
     
-	<atom:link href="https://jempe.github.io/blogkastro.github.io/categories/cocos-2d-x/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro/categories/cocos-2d-x/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Configurar proyecto Cocos2dx en Qt Creator GNU/Linux</title>
-      <link>https://jempe.github.io/blogkastro.github.io/cocos2dx/qt_creator/configurar_proyecto_cocos2dx_en_qt_creator_gnulinux/</link>
+      <link>https://jempe.github.io/blogkastro/cocos2dx/qt_creator/configurar_proyecto_cocos2dx_en_qt_creator_gnulinux/</link>
       <pubDate>Mon, 01 Apr 2013 04:30:51 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/cocos2dx/qt_creator/configurar_proyecto_cocos2dx_en_qt_creator_gnulinux/</guid>
+      <guid>https://jempe.github.io/blogkastro/cocos2dx/qt_creator/configurar_proyecto_cocos2dx_en_qt_creator_gnulinux/</guid>
       <description>Primero para poder compilar sin problemas de dependencias hay que crear una carpeta dentro de la carpeta donde se encuentra cocos2dx, en mi caso la llame cocos2dx_apps. Luego copiamos la carpeta HelloCpp y la copiamos en la nueva carpeta con el nombre de nuestro proyecto, en mi caso lo llame Prueba.
 Después abrimos Qt Creator y escojemos New File or Project Escojemos &amp;ldquo;Import Project&amp;rdquo; y de sus opciones &amp;ldquo;Import Existing Project&amp;rdquo;.</description>
     </item>

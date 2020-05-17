@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Androids on Mi Blog</title>
-    <link>https://jempe.github.io/blogkastro.github.io/android/</link>
+    <link>https://jempe.github.io/blogkastro/android/</link>
     <description>Recent content in Androids on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Sat, 14 Mar 2020 16:42:45 +0000</lastBuildDate>
     
-	<atom:link href="https://jempe.github.io/blogkastro.github.io/android/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bootear teléfono en cuanto se empieza a cargar</title>
-      <link>https://jempe.github.io/blogkastro.github.io/android/moto_g/bootear_telefono_en_cuanto_se_carga/</link>
+      <link>https://jempe.github.io/blogkastro/android/moto_g/bootear_telefono_en_cuanto_se_carga/</link>
       <pubDate>Sat, 14 Mar 2020 16:42:45 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/android/moto_g/bootear_telefono_en_cuanto_se_carga/</guid>
+      <guid>https://jempe.github.io/blogkastro/android/moto_g/bootear_telefono_en_cuanto_se_carga/</guid>
       <description>Primero es necesario que el teléfono este en modo fastboot. Para eso se puede conectar con el cable USB y utilizar el siguiente comando
 adb reboot bootloader Una vez esta en modo fastboot utilizar el comando
 fastboot oem-off-mode charge 0 Luego se reinicia el teléfono y cada vez que este apagado y se conecte el cargador. el teléfono arrancará.</description>
@@ -24,30 +24,30 @@ fastboot oem-off-mode charge 0 Luego se reinicia el teléfono y cada vez que est
     
     <item>
       <title>Errores al tratar de compilar con Android NDK</title>
-      <link>https://jempe.github.io/blogkastro.github.io/android/errores_al_tratar_de_compilar_con_android_ndk/</link>
+      <link>https://jempe.github.io/blogkastro/android/errores_al_tratar_de_compilar_con_android_ndk/</link>
       <pubDate>Tue, 19 Mar 2013 14:50:55 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/android/errores_al_tratar_de_compilar_con_android_ndk/</guid>
+      <guid>https://jempe.github.io/blogkastro/android/errores_al_tratar_de_compilar_con_android_ndk/</guid>
       <description>Hoy he estado trabajando en un proyecto interesante, descargue el codigo fuente de una aplicación android llamada android-eye que convierte dispositivos android en camaras ip, pero al tratar de compilar el codigo nativo usando el Android NDK me aparece el error
 Invalid attribute name: package  Después de buscar en google encontre la solución. Al parecer el archivo AndroidManifest.xml tiene saltos de linea \r\n y hay que convertirlos a saltos de linea UNIX \n, para corregirlo hay que usar dos2unix</description>
     </item>
     
     <item>
       <title>Contador Mi primera aplicación Android</title>
-      <link>https://jempe.github.io/blogkastro.github.io/android/contador_mi_primera_aplicacion_android/</link>
+      <link>https://jempe.github.io/blogkastro/android/contador_mi_primera_aplicacion_android/</link>
       <pubDate>Tue, 04 Dec 2012 03:16:56 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/android/contador_mi_primera_aplicacion_android/</guid>
+      <guid>https://jempe.github.io/blogkastro/android/contador_mi_primera_aplicacion_android/</guid>
       <description>Contador  Hace dos semanas publique mi primera aplicacion android.
 Tally Counter en Google Play, Tally Counter en Amazon App Store, fue gratificante hacerlo ya que nunca me habia agradado Java y finalmente me siento a gusto con el lenguaje. Decidi crear una aplicación sencilla pero hacerla lo mejor posible, asi que escogi hacer un contador (Mejor empezar con algo sencillo que esperar años para terminar y publicar algo). Mi talento para diseñar es muy limitado, pero creo que cumpli el objetivo de tener una interface sencilla de usar.</description>
     </item>
     
     <item>
       <title>Instalando imagenes oficiales en Nexus S 4G</title>
-      <link>https://jempe.github.io/blogkastro.github.io/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/</link>
+      <link>https://jempe.github.io/blogkastro/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/</link>
       <pubDate>Fri, 07 Sep 2012 14:54:34 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/</guid>
+      <guid>https://jempe.github.io/blogkastro/android/nexus_s/instalando_imagenes_oficiales_en_nexus_s_4g/</guid>
       <description>Me encuentro tratando de instalar android 4.0.4 en un Nexus S 4G
 Ya instale el sdk en mi computadora de escritorio y tengo fastboot en el path pero cuando corro el script flash-all.sh lo unico que ocurre es que el terminal se queda mostrandome el mensaje
 &amp;lt; waiting for device &amp;gt; Esto se debe a que en ubuntu (GNU Linux) fastboot necesita ser ejecutado por root, para hacerlo debo escribir</description>

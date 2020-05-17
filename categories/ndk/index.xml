@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ndk on Mi Blog</title>
-    <link>https://jempe.github.io/blogkastro.github.io/categories/ndk/</link>
+    <link>https://jempe.github.io/blogkastro/categories/ndk/</link>
     <description>Recent content in Ndk on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Tue, 19 Mar 2013 14:50:55 +0000</lastBuildDate>
     
-	<atom:link href="https://jempe.github.io/blogkastro.github.io/categories/ndk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro/categories/ndk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Errores al tratar de compilar con Android NDK</title>
-      <link>https://jempe.github.io/blogkastro.github.io/android/errores_al_tratar_de_compilar_con_android_ndk/</link>
+      <link>https://jempe.github.io/blogkastro/android/errores_al_tratar_de_compilar_con_android_ndk/</link>
       <pubDate>Tue, 19 Mar 2013 14:50:55 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/android/errores_al_tratar_de_compilar_con_android_ndk/</guid>
+      <guid>https://jempe.github.io/blogkastro/android/errores_al_tratar_de_compilar_con_android_ndk/</guid>
       <description>Hoy he estado trabajando en un proyecto interesante, descargue el codigo fuente de una aplicación android llamada android-eye que convierte dispositivos android en camaras ip, pero al tratar de compilar el codigo nativo usando el Android NDK me aparece el error
 Invalid attribute name: package  Después de buscar en google encontre la solución. Al parecer el archivo AndroidManifest.xml tiene saltos de linea \r\n y hay que convertirlos a saltos de linea UNIX \n, para corregirlo hay que usar dos2unix</description>
     </item>

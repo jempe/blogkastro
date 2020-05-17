@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Twitter on Mi Blog</title>
-    <link>https://jempe.github.io/blogkastro.github.io/categories/twitter/</link>
+    <link>https://jempe.github.io/blogkastro/categories/twitter/</link>
     <description>Recent content in Twitter on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
     <lastBuildDate>Mon, 15 Oct 2012 03:33:35 +0000</lastBuildDate>
     
-	<atom:link href="https://jempe.github.io/blogkastro.github.io/categories/twitter/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jempe.github.io/blogkastro/categories/twitter/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Corregir feeds de twitter en Wordpress</title>
-      <link>https://jempe.github.io/blogkastro.github.io/php/wordpress/corregir_feeds_de_twitter/</link>
+      <link>https://jempe.github.io/blogkastro/php/wordpress/corregir_feeds_de_twitter/</link>
       <pubDate>Mon, 15 Oct 2012 03:33:35 +0000</pubDate>
       
-      <guid>https://jempe.github.io/blogkastro.github.io/php/wordpress/corregir_feeds_de_twitter/</guid>
+      <guid>https://jempe.github.io/blogkastro/php/wordpress/corregir_feeds_de_twitter/</guid>
       <description>Hoy un amigo me pidio ayuda porque el feed de twitter de su sitio web dejo de funcionar. Su sitio contiene el portafolio de sus trabajos con piezas muy interesantes si desean visitarlo. http://www.mujica-tmp.com/,&amp;nbsp; Asi que me puse a investigar y la direccion del twitter parece haber cambiado.
 Esta es la direccion anterior
 http://twitter.com/statuses/user_timeline.json?screen_name=...
