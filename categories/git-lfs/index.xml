@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Lfs on Mi Blog</title>
+    <link>https://jempe.github.io/blogkastro/categories/git-lfs/</link>
+    <description>Recent content in Git Lfs on Mi Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ec</language>
+    <lastBuildDate>Tue, 19 May 2020 16:35:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jempe.github.io/blogkastro/categories/git-lfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Descargar Repositorio Git LFS sin archivos grandes</title>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/descargar_repo_git_lfs_sin_archivos_grandes/</link>
+      <pubDate>Tue, 19 May 2020 16:35:00 +0000</pubDate>
+      
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/descargar_repo_git_lfs_sin_archivos_grandes/</guid>
+      <description>Para descargar solo los archivos que uno desea y no todo el repositorio primero se usa el siguiente comando
+GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com/repo.git O el siguiente comando si el repositorio ya estaba descargado
+GIT_LFS_SKIP_SMUDGE=1 git pull Para ver los archivos que estan en el servidor LFS se usa el comando
+git lfs ls-files Para encontrar archivos que no han sido descargados se puede usar el siguiente comando
+git lfs ls-files | grep -e &#34;</description>
+    </item>
+    
+  </channel>
+</rss>
