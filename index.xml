@@ -6,10 +6,20 @@
     <description>Recent content on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
-    <lastBuildDate>Tue, 19 May 2020 16:35:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2020 21:02:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jempe.github.io/blogkastro/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Generar Random String</title>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/generar_random_string/</link>
+      <pubDate>Tue, 19 May 2020 21:02:00 +0000</pubDate>
+      
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/generar_random_string/</guid>
+      <description>Para generar un random string se usa el siguiente comando
+cat /dev/urandom | tr -dC [:alnum:] | head -c 32 </description>
+    </item>
     
     <item>
       <title>Descargar Repositorio Git LFS sin archivos grandes</title>

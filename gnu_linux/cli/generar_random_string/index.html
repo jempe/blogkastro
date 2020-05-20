@@ -4,21 +4,21 @@
 		<meta charset="utf-8">
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
     		<title>Mi Blog</title>
-		<link rel="canonical" href="https://jempe.github.io/blogkastro/gnu_linux/cli/insertar_saltos_de_linea_en_texto/" />
+		<link rel="canonical" href="https://jempe.github.io/blogkastro/gnu_linux/cli/generar_random_string/" />
 		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 		
 		<script type="application/ld+json">
 			{
 			  "@context": "http://schema.org",
 			  "@type": "Article",
-			  "headline": "Insertar salto de línea en archivo de texto",
-			  "datePublished": "2014-11-20",
-			  "description": "Insertar salto de línea en archivo de texto",
-    			  "wordCount": 39
+			  "headline": "Generar Random String",
+			  "datePublished": "2020-05-19",
+			  "description": "Como generar un random string",
+    			  "wordCount": 20
 			}
 		</script>
 		
-		<meta name="description" content="Insertar salto de línea en archivo de texto" />
+		<meta name="description" content="Como generar un random string" />
 		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 		<noscript>
 			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
@@ -386,20 +386,17 @@ figure.max600 {
 
 <main>
 	<section>
-			<time datetime="2014-11-20"><span class="day">20</span><span class="month month11"></span><span class="year">2014</span></time>
+			<time datetime="2020-05-19"><span class="day">19</span><span class="month month05"></span><span class="year">2020</span></time>
 
 
-		<h2>Insertar salto de línea en archivo de texto</h2>
+		<h2>Generar Random String</h2>
 	</section>
 	<section>
 		<article>
-			<p>Comando para remplazar caracter</p>
+			<p>Para generar un random string se usa el siguiente comando</p>
 
-<pre><code>find . -name "*.jpg" -size +400k -print0 | xargs -0 -I file convert -quality 85 file file</code></pre>
-
-<p>Voy a explicar que hace cada bloque comenzando por el primero</p>
-
-<pre><code>awk -v RS="" '{gsub (/},/,"},\n")}1' megamenu.json > megamenu_br.json</code></pre>
+<pre><code>cat /dev/urandom | tr -dC [:alnum:] | head -c 32</code></pre>
+ 
 
 		</article>
 	</section>
