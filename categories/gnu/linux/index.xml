@@ -6,10 +6,21 @@
     <description>Recent content in Gnu/Linux on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
-    <lastBuildDate>Tue, 19 May 2020 21:02:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 20:03:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jempe.github.io/blogkastro/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Md5sum de todos los archivos de una carpeta</title>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/md5sum_de_carpeta/</link>
+      <pubDate>Wed, 20 May 2020 20:03:00 +0000</pubDate>
+      
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/md5sum_de_carpeta/</guid>
+      <description>Para calcular los md5sum de todos los archivos en carpetas y subcarpetas se utiliza el siguiente comando
+find . -type f | xargs md5sum El comando funcionará correctamente a menos que haya archivos con espacios en sus nombres. Para solucionarlo debemos usar el argumento -d de xargs para definir un delimitador. En este caso el delimitador será \n. Asi usara la línea completa como argumento para md5sum
+find . -type f | xargs -d &#39;\n&#39; md5sum Ahora si deseamos excluir los archivos de una cierta carpeta como .</description>
+    </item>
     
     <item>
       <title>Generar Random String</title>
