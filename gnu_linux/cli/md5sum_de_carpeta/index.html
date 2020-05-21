@@ -14,7 +14,7 @@
 			  "headline": "Md5sum de todos los archivos de una carpeta",
 			  "datePublished": "2020-05-20",
 			  "description": "Como calcular el md5sum de todos los archivos de una carpeta (recursivo)",
-    			  "wordCount": 127
+    			  "wordCount": 173
 			}
 		</script>
 		
@@ -409,6 +409,14 @@ figure.max600 {
 <p>Para ordenar los nombres podemos añadir sort</p>
 
 <pre><code>find . -type f | grep -e "^\.\/.git" --invert-match | sort -n | xargs -d '\n' md5sum</code></pre>
+
+<p>Finalmente para grabar todo en un archivo se usa</p>
+
+<pre><code>find . -type f | grep -e "^\.\/.git" --invert-match | grep "./checksum" --invert-match | sort -n | xargs -d '\n' md5sum > checksum</code></pre>
+
+<p>y luego para cofirmar que los archivos no han cambiado se usa</p>
+
+<pre><code>md5sum -c checksum</code></pre>
 
 		</article>
 	</section>
