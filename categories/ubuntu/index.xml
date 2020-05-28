@@ -6,10 +6,22 @@
     <description>Recent content in Ubuntu on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
-    <lastBuildDate>Sun, 18 Nov 2012 13:13:52 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2020 13:13:52 +0000</lastBuildDate>
     
 	<atom:link href="https://jempe.github.io/blogkastro/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mostrar mensajes durante prendido y apagado</title>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/mostrar_mensajes_durante_prendido_y_apagado/</link>
+      <pubDate>Thu, 28 May 2020 13:13:52 +0000</pubDate>
+      
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/ubuntu/mostrar_mensajes_durante_prendido_y_apagado/</guid>
+      <description>Para encontrar problemas durante el prendido y apagado de un computador es necesario deshabilitar el spash screen para eso es necesario modificar el archivo /etc/default/grub y modificar la siguiente línea
+GRUB_CMDLINE_LINUX_DEFAULT=&#34;quiet splash&#34; Es necesario remover quiet splash
+y luego es necesario ejecutar el comando
+sudo update-grub </description>
+    </item>
     
     <item>
       <title>Corregir resolución LightDM</title>

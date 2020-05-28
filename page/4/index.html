@@ -348,7 +348,7 @@ figure.max600 {
 	
 		<li><a href="https://jempe.github.io/blogkastro/categories/git-lfs"> Git-Lfs (1)</a></li>
 	
-		<li><a href="https://jempe.github.io/blogkastro/categories/gnu/linux"> Gnu/Linux (18)</a></li>
+		<li><a href="https://jempe.github.io/blogkastro/categories/gnu/linux"> Gnu/Linux (19)</a></li>
 	
 		<li><a href="https://jempe.github.io/blogkastro/categories/go"> Go (1)</a></li>
 	
@@ -368,7 +368,7 @@ figure.max600 {
 	
 		<li><a href="https://jempe.github.io/blogkastro/categories/twitter"> Twitter (1)</a></li>
 	
-		<li><a href="https://jempe.github.io/blogkastro/categories/ubuntu"> Ubuntu (5)</a></li>
+		<li><a href="https://jempe.github.io/blogkastro/categories/ubuntu"> Ubuntu (6)</a></li>
 	
 		<li><a href="https://jempe.github.io/blogkastro/categories/wordpress"> Wordpress (2)</a></li>
 	
@@ -376,6 +376,19 @@ figure.max600 {
 </aside>
 
 <main>
+   
+    <section class="summary">
+	<h2>
+			<time datetime="2013-06-10"><span class="day">10</span><span class="month month06"></span><span class="year">2013</span></time>
+
+
+		<a href="https://jempe.github.io/blogkastro/reprap/resetear_extrusor_antes_de_imprimir/">Resetear extrusor antes de imprimir</a>
+	</h2>
+	<article>
+		<p>He tenido problemas con mis ultimas impresiones y algo que resulta muy frustrante es que cuando falla una impresion y trato de imprimir nuevamente el extrusor devuelve el filamento hacia el carrete en lugar de empujarlo hacia la superficie de impresión. Esto se debe a que al detener la impresion los valores de x, y, z vuelven a 0 pero el valor de el extrusor no lo hace. Para corregirlo me voy a asegurar de poner lo siguiente en la primera linea de todos los archivos para imprimir La instrucción anterior se asegura de que el valor del extrusor… <a href="https://jempe.github.io/blogkastro/reprap/resetear_extrusor_antes_de_imprimir/">leer más »</a></p>
+	</article>
+</section>
+
    
     <section class="summary">
 	<h2>
@@ -427,19 +440,6 @@ figure.max600 {
 	</h2>
 	<article>
 		<p>Recientemente tuve problemas con un sitio ya que usaba muchas imagenes grandes que habian sido guardadas en una calidad muy alta sin considerar que el tiempo de descarga para los visitantes iba a ser muy alto. Usando la línea de comandos reduje la calidad de las imagenes sin que sea notorio el deterioro debido a la compresion. Lo mejor fue que imagenes de 1.5 Mb se redujeron a 250Kb, asi que los tiempos de descarga se volvieron razonables. Aca esta el comando que lo hizo.   Voy a explicar que hace cada bloque comenzando por el primero   Este… <a href="https://jempe.github.io/blogkastro/gnu_linux/cli/disminuir_la_calidad_de_archivos_jpg_usando_la_linea_de_comandos/">leer más »</a></p>
-	</article>
-</section>
-
-   
-    <section class="summary">
-	<h2>
-			<time datetime="2013-01-30"><span class="day">30</span><span class="month month01"></span><span class="year">2013</span></time>
-
-
-		<a href="https://jempe.github.io/blogkastro/gnu_linux/administracion_servidor/instalar_wkhtmltopdf_en_centos_6/">Instalar Wkhtmltopdf en CENTOS 6</a>
-	</h2>
-	<article>
-		<p>Descargar wkhtmtopdf desde google code wget http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2 tar -xjvf wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2 chmod 0755 wkhtmltopdf-amd64 mv wkhtmltopdf-amd64 /usr/local/bin/wkhtmltopdf ln -s /usr/local/bin/wkhtmltopdf /usr/bin/   Luego me aparecio el error wkhtmltopdf: error while loading shared libraries: libXrender.so.1: cannot open shared object file: No such file or directory lo solucione instalando libxrender con el comando yum install libXrender   Luego aparecio un… <a href="https://jempe.github.io/blogkastro/gnu_linux/administracion_servidor/instalar_wkhtmltopdf_en_centos_6/">leer más »</a></p>
 	</article>
 </section>
 

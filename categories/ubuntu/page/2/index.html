@@ -4,21 +4,10 @@
 		<meta charset="utf-8">
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
     		<title>Mi Blog</title>
-		<link rel="canonical" href="https://jempe.github.io/blogkastro/css3/firefox/arreglar_problema_de_borderimage_en_firefox_15/" />
+		<link rel="canonical" href="https://jempe.github.io/blogkastro/categories/ubuntu/" />
 		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 		
-		<script type="application/ld+json">
-			{
-			  "@context": "http://schema.org",
-			  "@type": "Article",
-			  "headline": "Arreglar problema de border-image en Firefox 15",
-			  "datePublished": "2012-09-09",
-			  "description": "La propiedad border-image me parecio grandiosa cuando la use por primera vez, antes debia cortar las imagenes manualmente y solia haber problemas cuando los bordes eran irregulares. Firefox 15 hizo algunos cambios a esta propiedad y uno de los sitios web en los que trabaje se dañó completamente debido a esto, me puse a investigar una solución y encontre que se hicieron algunos cambios en firefox. Ya no se usa el prefijo -moz, es decir que -moz-border-image ya no funciona, ahora hay que escribir border-image. Otro cambio es que es indispensable…",
-    			  "wordCount": 225
-			}
-		</script>
-		
-		<meta name="description" content="La propiedad border-image me parecio grandiosa cuando la use por primera vez, antes debia cortar las imagenes manualmente y solia haber problemas cuando los bordes eran irregulares. Firefox 15 hizo algunos cambios a esta propiedad y uno de los sitios web en los que trabaje se dañó completamente debido a esto, me puse a investigar una solución y encontre que se hicieron algunos cambios en firefox. Ya no se usa el prefijo -moz, es decir que -moz-border-image ya no funciona, ahora hay que escribir border-image. Otro cambio es que es indispensable…" />
+		<meta name="description" content="" />
 		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 		<noscript>
 			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
@@ -311,6 +300,9 @@ figure.max600 {
 		
 		<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-NHBSGGK&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
 
+
+	<body>
+
 <header>
 	<amp-state id="menuState">
   		<script type="application/json">
@@ -385,70 +377,32 @@ figure.max600 {
 </aside>
 
 <main>
-	<section>
-			<time datetime="2012-09-09"><span class="day">09</span><span class="month month09"></span><span class="year">2012</span></time>
+   
+    <section class="summary">
+	<h2>
+			<time datetime="2007-10-06"><span class="day">06</span><span class="month month10"></span><span class="year">2007</span></time>
 
 
-		<h2>Arreglar problema de border-image en Firefox 15</h2>
-	</section>
-	<section>
-		<article>
-			<p>La propiedad border-image me parecio grandiosa cuando la use por primera vez, antes debia cortar las imagenes manualmente y solia haber problemas cuando los bordes eran irregulares.
-Firefox 15 hizo algunos cambios a esta propiedad y uno de los sitios web en los que trabaje se dañó completamente debido a esto, me puse a investigar una solución y encontre que se hicieron algunos cambios en firefox.</p>
+		<a href="https://jempe.github.io/blogkastro/gnu_linux/ubuntu/configurar_monitor_acer_al1916w_en_ubuntu_704/">Configurar monitor Acer AL1916W en Ubuntu 7.04</a>
+	</h2>
+	<article>
+		<p>Hace unas semanas tengo una pantalla ACER AL1916W de 19 pulgadas, realmente vale la pena, tengo un poco mas de espacio y comodidad. No tuve ningún problema en hacerla funcionar con OS X , arrancar el sistema fue suficiente para que la pantalla funcione con la resolución correcta.En Ubuntu me tardé un par de días en que funcione correctamente. La resolucion de 1280x1024, hace que todos los objetos se vean alargados. Encontré una buena guía en cocidobalmasedano pueden visitarla con este link si lo desean.Acer AL1916W compatible con LinuxAl… <a href="https://jempe.github.io/blogkastro/gnu_linux/ubuntu/configurar_monitor_acer_al1916w_en_ubuntu_704/">leer más »</a></p>
+	</article>
+</section>
 
-<p>Ya no se usa el prefijo <em>-moz</em>, es decir que <em>-moz-border-image</em> ya no funciona, ahora hay que escribir <em>border-image</em>. Otro cambio es que es indispensable darle un estilo solido al borde para que sea visible <em>border-style:solid</em>,
-y firefox ya no llena el interior del el objeto para que se eso hay que usar la palabra <em>fill. </em>Para mostrar los cambios que realize voy a mostrar el codigo de la hoja de estilos</p>
+  
 
-<p>Mi hoja de estilos se veia así:<em>&nbsp;</em></p>
+  <section id="paginator">
 
-<pre><code>#content{
-    width:921px;
-    padding-left:10px;
-    border-width:20px;
-    -webkit-border-image: url(site_images/big_border.png) 20 round;
-    -moz-border-image: url(site_images/big_border.png) 20 round;
-    float:left;
-    min-height:500px;
-    padding-top:5px;
-}</code></pre>
-<p>Después de corregir los problemas se ve asi:</p>
-<pre><code>#content{
-    width:921px;
-    padding-left:10px;
-    border-width:20px;
-    -webkit-border-image: url(site_images/big_border.png) 20 round;
-    -moz-border-image: url(site_images/big_border.png) 20 round;
-    border-image: url(site_images/big_border.png) 20 fill round;
-    border-style:solid;
-    float:left;
-    min-height:500px;
-    padding-top:5px;
-}</code></pre>
-
-<figure class="">
-	<amp-img src="https://jempe.github.io/blogkastro/images/thumbs/1500w/ecole_wo_borders.png"
-  srcset="https://jempe.github.io/blogkastro/images/thumbs/1500w/ecole_wo_borders.png 1500w, https://jempe.github.io/blogkastro/images/thumbs/1080w/ecole_wo_borders.png 1080w, https://jempe.github.io/blogkastro/images/thumbs/900w/ecole_wo_borders.png 900w, https://jempe.github.io/blogkastro/images/thumbs/800w/ecole_wo_borders.png 800w, https://jempe.github.io/blogkastro/images/thumbs/700w/ecole_wo_borders.png 700w, https://jempe.github.io/blogkastro/images/thumbs/600w/ecole_wo_borders.png 600w, https://jempe.github.io/blogkastro/images/thumbs/500w/ecole_wo_borders.png 500w, https://jempe.github.io/blogkastro/images/thumbs/400w/ecole_wo_borders.png 400w, https://jempe.github.io/blogkastro/images/thumbs/300w/ecole_wo_borders.png 300w, https://jempe.github.io/blogkastro/images/thumbs/200w/ecole_wo_borders.png 200w, https://jempe.github.io/blogkastro/images/thumbs/100w/ecole_wo_borders.png 100w"
-  width="974"
-  height="352"
-  layout="responsive"
-  alt="Corrección border-image Firefox"></amp-img>
-	<span class="figcation">Corrección border-image Firefox</span>
-</figure>
+    <a id="previous" href="https://jempe.github.io/blogkastro/categories/ubuntu/">
+        Página Anterior
+    </a>
 
 
-<p>Esta una imagen que muestra el problema, a la izquierda se puede ver como estaba antes de la corrección y a la derecha se aprecia los bordes y el fondo corregidos</p>
+</section>
 
-		</article>
-	</section>
-	<div id="post_categories">
-		Categorias: 
-		
-			<a href="https://jempe.github.io/blogkastro/categories/css3"> CSS3 </a>
-		
-			<a href="https://jempe.github.io/blogkastro/categories/firefox"> Firefox </a>
-		
-	</div>
 </main>
+
 	<footer>
 		<div id="license">
 			<a rel="license" href="//creativecommons.org/licenses/by/3.0/"><amp-img alt="Licencia Creative Commons" src="//i.creativecommons.org/l/by/3.0/88x31.png" width="88" height="31" layout="fixed"></a><span id="license_text">Este obra está bajo una <a rel="license" href="//creativecommons.org/licenses/by/3.0/">licencia Creative Commons Atribución 3.0 Unported</a>.</span>
@@ -457,4 +411,5 @@ y firefox ya no llena el interior del el objeto para que se eso hay que usar la 
 	</footer>
 </body>
 </html>
+
 
