@@ -4,21 +4,21 @@
 		<meta charset="utf-8">
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
     		<title>Mi Blog</title>
-		<link rel="canonical" href="https://jempe.github.io/blogkastro/gnu_linux/ubuntu/mostrar_mensajes_durante_prendido_y_apagado/" />
+		<link rel="canonical" href="https://jempe.github.io/blogkastro/gnu_linux/cli/prender_computadora_con_magic_packet/" />
 		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 		
 		<script type="application/ld+json">
 			{
 			  "@context": "http://schema.org",
 			  "@type": "Article",
-			  "headline": "Mostrar mensajes durante prendido y apagado",
-			  "datePublished": "2020-05-28",
-			  "description": "Para encontrar problemas durante el prendido y apagado de un computador es necesario deshabilitar el spash screen ...",
-    			  "wordCount": 46
+			  "headline": "Prender Computadora con Magic Packet",
+			  "datePublished": "2020-05-31",
+			  "description": "Como prender computadora con magic packet",
+    			  "wordCount": 83
 			}
 		</script>
 		
-		<meta name="description" content="Para encontrar problemas durante el prendido y apagado de un computador es necesario deshabilitar el spash screen ..." />
+		<meta name="description" content="Como prender computadora con magic packet" />
 		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 		<noscript>
 			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
@@ -386,22 +386,22 @@ figure.max600 {
 
 <main>
 	<section>
-			<time datetime="2020-05-28"><span class="day">28</span><span class="month month05"></span><span class="year">2020</span></time>
+			<time datetime="2020-05-31"><span class="day">31</span><span class="month month05"></span><span class="year">2020</span></time>
 
 
-		<h2>Mostrar mensajes durante prendido y apagado</h2>
+		<h2>Prender Computadora con Magic Packet</h2>
 	</section>
 	<section>
 		<article>
-			<p>Para encontrar problemas durante el prendido y apagado de un computador es necesario deshabilitar el spash screen para eso es necesario modificar el archivo /etc/default/grub y modificar la siguiente línea</p>
+			<p>Primero es necesario habilitar la opción para prender la computadora con un magic packet en el Bios. En un mainboard Asus es necesario entrar a Advanced View y buscar Wake Up Options &gt; APM &gt; Enable Power On by PCIE.</p>
 
-<pre><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code></pre>
+<p>Luego usar el siguiente comando (remplazando eth0 por el id de la tarjeta Ethernet):</p>
 
-<p>Es necesario remover <strong>quiet splash</strong></p>
+<pre><code>sudo ethtool -s eth0 wol g</code></pre>
 
-<p>y luego es necesario ejecutar el comando</p>
+<p>Luego para prender la computadora hay que usar el siguiente comando (remplazando 00:00:00:00:00:00 por el MAC address de la tarjeta ethernet):</p>
 
-<pre><code>sudo update-grub</code></pre>
+<pre><code>wakeonlan 00:00:00:00:00:00</code></pre>
 
 		</article>
 	</section>
@@ -409,8 +409,6 @@ figure.max600 {
 		Categorias: 
 		
 			<a href="https://jempe.github.io/blogkastro/categories/gnu/linux"> GNU/Linux </a>
-		
-			<a href="https://jempe.github.io/blogkastro/categories/ubuntu"> Ubuntu </a>
 		
 	</div>
 </main>

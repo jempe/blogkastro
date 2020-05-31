@@ -6,10 +6,21 @@
     <description>Recent content in Gnu/Linux on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
-    <lastBuildDate>Thu, 28 May 2020 13:13:52 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 08:03:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jempe.github.io/blogkastro/categories/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Prender Computadora con Magic Packet</title>
+      <link>https://jempe.github.io/blogkastro/gnu_linux/cli/prender_computadora_con_magic_packet/</link>
+      <pubDate>Sun, 31 May 2020 08:03:00 +0000</pubDate>
+      
+      <guid>https://jempe.github.io/blogkastro/gnu_linux/cli/prender_computadora_con_magic_packet/</guid>
+      <description>Primero es necesario habilitar la opción para prender la computadora con un magic packet en el Bios. En un mainboard Asus es necesario entrar a Advanced View y buscar Wake Up Options &amp;gt; APM &amp;gt; Enable Power On by PCIE.
+Luego usar el siguiente comando (remplazando eth0 por el id de la tarjeta Ethernet):
+sudo ethtool -s eth0 wol g Luego para prender la computadora hay que usar el siguiente comando (remplazando 00:00:00:00:00:00 por el MAC address de la tarjeta ethernet):</description>
+    </item>
     
     <item>
       <title>Mostrar mensajes durante prendido y apagado</title>
