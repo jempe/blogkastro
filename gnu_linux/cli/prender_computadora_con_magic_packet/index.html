@@ -14,7 +14,7 @@
 			  "headline": "Prender Computadora con Magic Packet",
 			  "datePublished": "2020-05-31",
 			  "description": "Como prender computadora con magic packet",
-    			  "wordCount": 83
+    			  "wordCount": 135
 			}
 		</script>
 		
@@ -402,6 +402,24 @@ figure.max600 {
 <p>Luego para prender la computadora hay que usar el siguiente comando (remplazando 00:00:00:00:00:00 por el MAC address de la tarjeta ethernet):</p>
 
 <pre><code>wakeonlan 00:00:00:00:00:00</code></pre>
+
+<p>Si se desea que esto sea permanente se puede crear un servicio en systemd creando un archivo en /etc/systemd/system/wol.service con el siguiente contenido</p>
+
+<pre><code>[Unit]
+Description=Wake-on-LAN for eth0
+Requires=network.target
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ethtool -s eth0 wol g
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+
+<p>despues para activar el nuevo servicio se utiliza el siguiente comando</p>
+
+<pre><code>systemctl enable wol.service</code></pre>
 
 		</article>
 	</section>
