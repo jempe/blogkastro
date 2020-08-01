@@ -6,10 +6,21 @@
     <description>Recent content in Android on Mi Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ec</language>
-    <lastBuildDate>Sat, 14 Mar 2020 16:42:45 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2020 12:16:56 +0000</lastBuildDate>
     
 	<atom:link href="https://jempe.github.io/blogkastro/categories/android/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Buscar el APK de un app instalada en android</title>
+      <link>https://jempe.github.io/blogkastro/android/buscar_un_apk_de_una_app_instalada/</link>
+      <pubDate>Fri, 31 Jul 2020 12:16:56 +0000</pubDate>
+      
+      <guid>https://jempe.github.io/blogkastro/android/buscar_un_apk_de_una_app_instalada/</guid>
+      <description>Buscar y descargar un apk instalado en mi teléfono para instalarlo en otro dispositivo adb shell pm list packages -f | grep appname 
+El path del APK aparecerá en la lista, luego descargarlo a la computadora con el comando
+adb pull /data/app/com.vendor.app/base.apk  </description>
+    </item>
     
     <item>
       <title>Bootear teléfono en cuanto se empieza a cargar</title>

@@ -4,21 +4,21 @@
 		<meta charset="utf-8">
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
     		<title>Mi Blog</title>
-		<link rel="canonical" href="https://jempe.github.io/blogkastro/reprap/la_primera_impresion_de_mi_prusa_mendel/" />
+		<link rel="canonical" href="https://jempe.github.io/blogkastro/android/buscar_un_apk_de_una_app_instalada/" />
 		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 		
 		<script type="application/ld+json">
 			{
 			  "@context": "http://schema.org",
 			  "@type": "Article",
-			  "headline": "La primera impresión exitosa de mi Prusa Mendel",
-			  "datePublished": "2012-05-12",
-			  "description": "Armar una impresora 3D es un proceso largo que requiere mucha paciencia, yo decidí armar la mía hace casi un año. Empeza a pedir las partes impresas, los componentes electronicosy a buscar las piezas que pueda conseguir en la ciudad.Ha sido un proceso muy intersante y finalmente ha empezado a rendir…",
-    			  "wordCount": 89
+			  "headline": "Buscar el APK de un app instalada en android",
+			  "datePublished": "2020-07-31",
+			  "description": "Buscar y descargar un apk instalado en mi teléfono para instalarlo en otro dispositivo",
+    			  "wordCount": 42
 			}
 		</script>
 		
-		<meta name="description" content="Armar una impresora 3D es un proceso largo que requiere mucha paciencia, yo decidí armar la mía hace casi un año. Empeza a pedir las partes impresas, los componentes electronicosy a buscar las piezas que pueda conseguir en la ciudad.Ha sido un proceso muy intersante y finalmente ha empezado a rendir…" />
+		<meta name="description" content="Buscar y descargar un apk instalado en mi teléfono para instalarlo en otro dispositivo" />
 		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 		<noscript>
 			<style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
@@ -386,32 +386,29 @@ figure.max600 {
 
 <main>
 	<section>
-			<time datetime="2012-05-12"><span class="day">12</span><span class="month month05"></span><span class="year">2012</span></time>
+			<time datetime="2020-07-31"><span class="day">31</span><span class="month month07"></span><span class="year">2020</span></time>
 
 
-		<h2>La primera impresión exitosa de mi Prusa Mendel</h2>
+		<h2>Buscar el APK de un app instalada en android</h2>
 	</section>
 	<section>
 		<article>
-			<p>Armar una impresora 3D es un proceso largo que requiere mucha paciencia, yo decidí armar la mía hace casi un año. Empeza a pedir las partes impresas, los componentes electronicos y a buscar las piezas que pueda conseguir en la ciudad.Ha sido un proceso muy intersante y finalmente ha empezado a rendir frutos hoy hice mi primera impresión exitosa usando filamento PLA. Un cojinete para otra impresora ha sido lo primero que he podido crear. No es gran cosa pero para mi ha sido un gran logro</p>
+			<p>Buscar y descargar un apk instalado en mi teléfono para instalarlo en otro dispositivo
+<pre><code>adb shell
+pm list packages -f | grep appname
+</code></pre></p>
 
-<figure class="">
-	<amp-img src="https://jempe.github.io/blogkastro/images/thumbs/1500w/IMG_47141.JPG"
-  srcset="https://jempe.github.io/blogkastro/images/thumbs/1500w/IMG_47141.JPG 1500w, https://jempe.github.io/blogkastro/images/thumbs/1080w/IMG_47141.JPG 1080w, https://jempe.github.io/blogkastro/images/thumbs/900w/IMG_47141.JPG 900w, https://jempe.github.io/blogkastro/images/thumbs/800w/IMG_47141.JPG 800w, https://jempe.github.io/blogkastro/images/thumbs/700w/IMG_47141.JPG 700w, https://jempe.github.io/blogkastro/images/thumbs/600w/IMG_47141.JPG 600w, https://jempe.github.io/blogkastro/images/thumbs/500w/IMG_47141.JPG 500w, https://jempe.github.io/blogkastro/images/thumbs/400w/IMG_47141.JPG 400w, https://jempe.github.io/blogkastro/images/thumbs/300w/IMG_47141.JPG 300w, https://jempe.github.io/blogkastro/images/thumbs/200w/IMG_47141.JPG 200w, https://jempe.github.io/blogkastro/images/thumbs/100w/IMG_47141.JPG 100w"
-  width="3144"
-  height="2336"
-  layout="responsive"
-  alt="Cojinete impreso"></amp-img>
-	<span class="figcation">Cojinete impreso</span>
-</figure>
+<p>El path del APK aparecerá en la lista, luego descargarlo a la computadora con el comando</p>
 
+<pre><code>adb pull /data/app/com.vendor.app/base.apk
+</code></pre>
 
 		</article>
 	</section>
 	<div id="post_categories">
 		Categorias: 
 		
-			<a href="https://jempe.github.io/blogkastro/categories/reprap"> RepRap </a>
+			<a href="https://jempe.github.io/blogkastro/categories/android"> Android </a>
 		
 	</div>
 </main>
